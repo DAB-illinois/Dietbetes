@@ -51,3 +51,32 @@ h1 {
 	background-color: green;
 	width: 35%;
 }
+
+form {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    padding-bottom: 5%;
+}
+
+form p {
+	margin: 0;
+}
+
+input {
+    padding: 1%;
+    margin: 5%;
+}
+
+input[type="number"],
+input[type="text"] {
+     width: 45%;
+    display: inline-block;
+    border: 1px solid #999;
+    height: 25px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+input[type="submit"] {
+	width: 20%;
+}

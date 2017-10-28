@@ -25,6 +25,17 @@ def my_form():
 	scat_values = {1:6, 2:5, 3:4}
 	return render_template('index.html', values=values, labels=labels, scatter_values=scat_values)
 
+@app.route('/', methods=['POST'])
+def my_form_post():
+    gender = request.form['gender']
+    age = request.form['age']
+    race = request.form['race']
+    food = request.form['food']
+    serving_size = request.form['serving_size']
+
+    if gender == "" or age == "" or race == "" or food == "" or serving_size == "":
+    	return "Invalid Inputs!"
+    return gender + age + race + food + serving_size
 
 if __name__ == "__main__":
 	app.run(debug=True)

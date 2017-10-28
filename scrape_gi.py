@@ -47,8 +47,9 @@ for i in range(1, MAX_INDEX):
 	else:
 		gi_data[name] = [gi_index]
 
-for i, j in gi_data.items():
-	l = len(j)
-	s = sum(j)
-	avg = int((s/l)*100)/100;
-	add_to_db({i: str(avg)})
+with open("gi_indices.txt", "w") as f:
+	for i, j in gi_data.items():
+		l = len(j)
+		s = sum(j)
+		avg = int((s/l)*100)/100;
+		f.write(i+":"+str(avg)+"\n")
