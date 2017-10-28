@@ -1,6 +1,13 @@
 import diabetes_data_set as data
 import matplotlib.pyplot as plt
 
+from pymongo import MongoClient
+client = MongoClient()
+client = MongoClient('localhost', 27017)
+DATABASE_NAME = "databetes_app"
+TABLE_NAME = "diabetes_data_set"
+db = client[DATABASE_NAME]
+
 def draw():
 	race = data.get_race()
 	sex = data.get_sex()
@@ -18,9 +25,10 @@ def draw():
 			race_x_y["a1c"] = a1c
 			current_race["" + x + "," + i] = race_x_y
 		
-		race_graphs.append(current_race)
-		current_race = {}
-		race_x_y = {}
+			db.insert_one(current_race)
+			race_graphs.append(current_race)
+			current_race = {}
+			race_x_y = {}
 
 	return race_graphs
 
