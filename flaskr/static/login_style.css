@@ -17,10 +17,6 @@ h1 {
     color: white;
 }
 
-h1:hover{
-    color:blue;
-}
-
 form {
     margin: 5%;
     width: 90%;
@@ -52,36 +48,33 @@ input[type="text"] {
     font-size: 30px;
 }
 
-
-.hvr-sweep-to-top {
-    width: 20%;
-    display: block;
-    margin: 0 auto;
-    font-size: 30px;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  position: relative;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+input[type=submit] {
+	background:#ffffff;
+	width: 20%;
+	display: block;
+	margin: 0 auto;
+	font-size: 20px;
+	border-bottom: 2px solid rgba(47, 198, 47, 1);
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+	font-family: 'Slabo 27px', serif;
 }
 
-a{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform : transition(-50%, -50%);
-    width: 180px;
-    height: 50px;
-    background: #262626;
-    text-transform: uppercase;
-    text-align: 50px;
-    color:#ff0;
-    text-decoration: none;
-    font-size: 20px;
-    font-family: verdana;
-    letter-spacing: 4px;
+@keyframes fade-in {
+    0% {
+        background: rgba(47, 198, 47, 0);
+    }
+    60% {
+        background: rgba(47, 198, 47, .8);
+    }
+    100% {
+        background: rgba(47, 198, 47, 1);
+    }
 }
+
+input[type=submit]:hover{
+	animation: fade-in 1s ease;
+	background: rgba(47, 198, 47, 1);
+}
+
