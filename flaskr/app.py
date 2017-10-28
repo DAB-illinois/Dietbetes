@@ -54,11 +54,11 @@ def new_user():
 @app.route('/new/', methods=['POST'])
 def new_user_input():
 	global client_name
+	if "gender" not in request.form or "age" not in request.form or "race" not in request.form:
+		return "Invalid params"
 	gender = request.form['gender']
 	age = request.form['age']
 	race = request.form['race']
-	if gender == "" or age == "" or race == "":
-		return "Invalid params"
 	new_doc = {"name":client_name, "age":age, "gender":gender, "race":race, "carb_log":{}, "serv_log":{}}
 	add(new_doc)
 	return redirect(url_for('main'))
