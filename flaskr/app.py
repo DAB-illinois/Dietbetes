@@ -68,6 +68,7 @@ def main():
 	carb_values = []
 	for i in carb_hist:
 		carb_labels.append(i)
+	carb_labels.sort()
 	for i in carb_labels:
 		carb_values.append(carb_hist[i])
 	serv_hist = history['serv_log']
@@ -75,6 +76,7 @@ def main():
 	serv_values = []
 	for i in serv_hist:
 		serv_labels.append(i)
+	serv_labels.sort()
 	for i in serv_labels:
 		serv_values.append(serv_hist[i])
 
