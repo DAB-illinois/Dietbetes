@@ -1,6 +1,10 @@
-import urllib
+from fatsecret import Fatsecret
 from key import KEY, SHARED_SECRET
+import pprint
 
-BASE_URL = "http://platform.fatsecret.com/rest/server.api?"
+fs = Fatsecret(KEY, SHARED_SECRET)
 
-params = 
+foods = fs.foods_search("Tacos")
+
+pp = pprint.PrettyPrinter(depth=6)
+pp.pprint(foods)
