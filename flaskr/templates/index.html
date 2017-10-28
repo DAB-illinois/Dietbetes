@@ -24,10 +24,6 @@
             <canvas id="carb_chart"></canvas>
         </div>
         <div class="chart">
-            <p>Daily Glycemic Load (GL) Trends</p>
-            <canvas id="gl_chart"></canvas>
-        </div>
-        <div class="chart">
             <p>You Relative to Diabetic Patients</p>
             <canvas id="compare_chart"></canvas>
         </div>
@@ -45,7 +41,6 @@
     // get bar chart canvas
     var serving_chart = document.getElementById("serving_chart").getContext("2d");
     var carb_chart = document.getElementById("carb_chart").getContext("2d");
-    var gl_chart = document.getElementById("gl_chart").getContext("2d");
     var compare_chart = document.getElementById("compare_chart").getContext("2d");
 
     // bar chart data
@@ -104,34 +99,6 @@
         options: {
             legend: { display: false },
 			maintainAspectRatio: false,
-            scales: {
-	            yAxes: [{
-	                ticks: {
-	                    beginAtZero:true,
-	                }
-	            }]
-	        }
-        }
-    });
-
-    new Chart(gl_chart, {
-        type: 'line',
-        data: {
-	        labels: [{% for item in labels %}
-	            "{{item}}", {% endfor %}
-	        ],
-	        datasets: [{
-	            backgroundColor: mainGraphColorTransparent,
-	            fill: true,
-	            borderColor: mainGraphColorOpaque,
-	            data: [{% for item in values %} {{ item }},
-	                {% endfor %}
-	            ]
-	        }]
-	    },
-        options: {
-            legend: { display: false },
-            maintainAspectRatio: false,
             scales: {
 	            yAxes: [{
 	                ticks: {
