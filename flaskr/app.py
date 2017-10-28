@@ -45,6 +45,8 @@ def login_post():
 
 @app.route('/new/')
 def new_user():
+	if client_name == "":
+		return redirect(url_for('login'))
 	return render_template('new_user.html', username=client_name)
 
 @app.route('/new/', methods=['POST'])
