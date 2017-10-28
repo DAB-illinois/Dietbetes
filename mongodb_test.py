@@ -13,6 +13,10 @@ def retrieve(params, posts):
 	post = posts.find_one(params)
 	return post
 
+def update(user_id, dic):
+	posts = db.posts
+	posts.update_many({"author": user_id}, dic)
+
 post_data = {
 	'title': 'Python and MongoDB',
 	'content': 'PyMongo is fun, you guys',
