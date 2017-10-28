@@ -38,6 +38,8 @@ def login():
 def login_post():
 	global client_name
 	client_name = request.form['name']
+	if client_name == "":
+		return redirect(url_for('login'))
 	if db[TABLE_NAME].find({'name': client_name}).count() <= 0:
 		return redirect(url_for('new_user'))
 	else:
