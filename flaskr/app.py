@@ -65,7 +65,7 @@ def my_form_post():
     	return "Invalid Inputs!"
 
     current_time = str(datetime.now())
-    queries = fatsecret.search_food(food)
+    queries = fatsecret_api.search_food(food)
     food_names = []
     for food_data in queries:
     	food_names.append(food_data["food_name"])
