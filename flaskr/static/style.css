@@ -83,7 +83,7 @@ input {
 
 input[type="number"],
 input[type="text"] {
-     width: 45%;
+    width: 45%;
     display: inline-block;
     border: 1px solid #999;
     height: 25px;
@@ -96,8 +96,4 @@ input[type="submit"] {
 
 input:focus {
 	border-color: #119311
-}
-
-.invisible {
-    display: none;
 }

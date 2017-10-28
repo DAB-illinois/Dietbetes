@@ -30,6 +30,7 @@ form p {
 	font-size: 40px;
 }
 
+input[type="number"],
 input[type="text"] {
 	background-color: #2fc62f;
     color: white;

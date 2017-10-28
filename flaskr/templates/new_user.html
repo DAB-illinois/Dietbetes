@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dietbetes</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='login_style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+
+<body>
+    <div id="top">
+        <h1>Dietbetes</h1>
+        <p>{{ username }}</p>
+    </div>
+    <form action="." method="POST">
+        <div>
+            <div"><p>Your sex:</p>
+                <input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" value="female"> Female
+            </div>
+            <div""><p>Your age: </p><input type="number" name="age"></div>
+            <div"><p>Your race:</p>
+                <input type="radio" name="race" value="african_american"> African American
+                <input type="radio" name="race" value="asian"> Asian
+                <input type="radio" name="race" value="caucasian"> Caucasian
+                <input type="radio" name="race" value="hipsanic"> Hispanic
+                <input type="radio" name="race" value="other"> Other
+            </div>
+        </div>
+        
+        <input type="submit" name="my-form" value="Submit">
+    </form>
+</body>
+
+</html>

@@ -11,7 +11,6 @@ DATABASE_NAME = "databetes_app"
 TABLE_NAME = "user_data"
 db = client[DATABASE_NAME]
 client_name = ""
-is_new = ""
 
 import fatsecret_api
 
@@ -36,14 +35,26 @@ def login():
 
 @app.route('/', methods=['POST'])
 def login_post():
-	global client_name, n
+	global client_name
 	client_name = request.form['name']
 	if db[TABLE_NAME].find({'name': client_name}).count() <= 0:
 		add({'name': client_name, 'gender':None, 'age':None,'race':None,'food_log':{}})
-		is_new = True
+		return redirect(url_for('new_user'))
 	else:
-		is_new = False
-	return redirect(url_for('main'))
+		return redirect(url_for('main'))
+
+@app.route('/new/')
+def new_user():
+	return render_template('new_user.html', username=client_name)
+
+@app.route('/new/', methods=['POST'])
+def new_user_input():
+    gender = request.form['gender']
+    age = request.form['age']
+    race = request.form['race']
+    new_doc = {"age":age, "gender":gender, "race":race}
+    update(client_name, new_doc)
+    return redirect(url_for('main'))
 
 @app.route('/main/')
 def main():
@@ -53,19 +64,13 @@ def main():
 	labels = ["January","February","March","April","May","June","July","August"]
 	values = [10,9,8,7,6,4,7,8]
 	scat_values = {1:6, 2:5, 3:4}
-	if is_new:
-		return render_template('index.html', username=client_name, values=values, labels=labels, scatter_values=scat_values)
-	else:
-		return render_template('index.html', visibility="invisible", username=client_name, values=values, labels=labels, scatter_values=scat_values)
+	return render_template('index.html', username=client_name, values=values, labels=labels, scatter_values=scat_values)
 
 @app.route('/main/', methods=['POST'])
 def my_form_post():
-    gender = request.form['gender']
-    age = request.form['age']
-    race = request.form['race']
     food = request.form['food']
     serving_size = request.form['serving_size']
-    if gender == "" or age == "" or race == "" or food == "" or serving_size == "":
+    if food == "" or serving_size == "":
     	return "Invalid Inputs!"
 
     #current_time = str(datetime.now())
@@ -73,12 +78,11 @@ def my_form_post():
     food_names = []
     for food_data in queries:
     	food_names.append(food_data["food_name"])
-    new_doc = {"name":name, "age":age, "gender":gender, "race":race, "food_log": {}}
 
     labels = ["January","February","March","April","May","June","July","August"]
     values = [10,9,8,7,6,4,7,8]
     scat_values = {1:6, 2:5, 3:4}
-    return render_template('index_choose_food.html', results=food_names, new=n, username=client_name, values=values, labels=labels, scatter_values=scat_values)
+    return render_template('choose_food.html', results=food_names, new=n, username=client_name, values=values, labels=labels, scatter_values=scat_values)
 
 if __name__ == "__main__":
 	app.run(debug=True)

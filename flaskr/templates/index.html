@@ -11,7 +11,7 @@
 <body>
 	<div id="top">
 		<h1>Dietbetes</h1>
-		<p>{{ username }} {{new}}</p>
+		<p>{{ username }}</p>
 	</div>
     <div class="outer" id="today">
         <p class="div_head">Your Data for Today</p>
@@ -35,18 +35,6 @@
     <div class="outer" id="log">
         <p class="div_head">Log Today's Meals!</p>
         <form action="." method="POST">
-	        <div class="{{ visibility }}"><p>Your sex:</p>
-	        	<input type="radio" name="gender" value="male"> Male
-  				<input type="radio" name="gender" value="female"> Female
-  			</div>
-	        <div class="{{ visibility }}""><p>Your age: </p><input type="number" name="age"></div>
-	        <div class="{{ visibility }}"><p>Your race:</p>
-	        	<input type="radio" name="race" value="african_american"> African American
-	        	<input type="radio" name="race" value="asian"> Asian
-	        	<input type="radio" name="race" value="caucasian"> Caucasian
-  				<input type="radio" name="race" value="hipsanic"> Hispanic
-  				<input type="radio" name="race" value="other"> Other
-  			</div>
 	        <div><p>Food eaten: </p><input type="text" name="food"></div>
 	        <div><p>Approximate serving size: </p><input type="number" name="serving_size"></div>
 
