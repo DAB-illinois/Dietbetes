@@ -17,6 +17,7 @@ def retrieve(params, posts):
 @app.route('/')
 def my_form():
 	doc = retrieve({"author":"Brandon"}, db.posts)
+	print(doc)
 	return render_template("index.html", title=doc["title"], author=doc["author"])
 
 if __name__ == "__main__":
