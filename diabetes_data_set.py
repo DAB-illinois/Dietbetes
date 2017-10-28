@@ -39,4 +39,16 @@ def getDiabeticData():
 def imptAttCalc(count):
 	return (50 * count)
 
+def getData2():
+	collection = []
+	with open("file1-mto_nejm_puf_cells_20131025.dta", "rb") as f:
+		byte = f.read(1)
+		while byte != "":
+			collection.append(byte)
+        	# Do stuff with byte.
+			byte = f.read(1)
+			print(byte)
+	print(collection)
+
 getDiabeticData()
+#getDiabeticData()
