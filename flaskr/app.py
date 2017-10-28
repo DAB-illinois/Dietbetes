@@ -122,7 +122,7 @@ def choose_food_post():
 	url = data['food_url']
 	carbs_per_serv = float(fatsecret_crawl.get_carb_per_serving(url))
 	total_carbs = int(float(serving_size) * carbs_per_serv *100)/100
-	current_time = str(datetime.now())
+	current_time = str(datetime.now()).split(" ")[0]
 	old = retrieve(client_name, db[TABLE_NAME])
 	old_carbs = old['carb_log']
 	old_serv = old['serv_log']
