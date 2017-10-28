@@ -61,7 +61,7 @@ def new_user_input():
 
 @app.route('/main/')
 def main():
-	global client_name
+	global client_name, carb_labels, carb_values, serv_values, serv_labels
 	history = retrieve(client_name, db[TABLE_NAME])
 	carb_hist = history['carb_log']
 	carb_labels = []
@@ -97,7 +97,7 @@ def main():
 
 @app.route('/main/', methods=['POST'])
 def my_form_post():
-    global queries
+    global client_name, carb_labels, carb_values, serv_values, serv_labels, queries
     food = request.form['food']
     if food == "":
     	return "Invalid Inputs!"
@@ -118,7 +118,7 @@ def choose_food():
 	for food_data in queries:
 		food_names.append(food_data["food_name"])
 
-	return render_template('choose_food.html', results=food_names, username=client_name, values=values, labels=labels, scatter_values=scat_values)
+	return render_template('choose_food.html', results=food_names, username=client_name, scatter_values=scat_values, carb_labels=carb_labels, carb_values=carb_values, serv_labels=serv_labels, serv_values=serv_values)
 
 @app.route('/choose_food/', methods=['POST'])
 def choose_food_post():
