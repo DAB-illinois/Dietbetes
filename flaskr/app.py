@@ -11,6 +11,7 @@ DATABASE_NAME = "databetes_app"
 TABLE_NAME = "user_data"
 db = client[DATABASE_NAME]
 client_name = ""
+n = ""
 
 import fatsecret_api
 
@@ -31,22 +32,23 @@ def login():
 
 @app.route('/', methods=['POST'])
 def login_post():
-	global client_name
+	global client_name, n
 	client_name = request.form['name']
 	if db[TABLE_NAME].find({'name': client_name}).count() > 0:
-		print("yes")
-	print("no")
+		n = "yes"
+	else:
+		n = "no"
 	return redirect(url_for('main'))
 
 @app.route('/main/')
 def main():
-	global client_name
+	global client_name, n
 	# doc = retrieve({"author":"Brandon"}, db.posts)
 	# print(doc)
 	labels = ["January","February","March","April","May","June","July","August"]
 	values = [10,9,8,7,6,4,7,8]
 	scat_values = {1:6, 2:5, 3:4}
-	return render_template('index.html', username=client_name, values=values, labels=labels, scatter_values=scat_values)
+	return render_template('index.html', new=n, username=client_name, values=values, labels=labels, scatter_values=scat_values)
 
 @app.route('/main/', methods=['POST'])
 def my_form_post():
