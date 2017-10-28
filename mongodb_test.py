@@ -11,7 +11,7 @@ def add(dic):
 
 def retrieve(params, posts):
 	post = posts.find_one(params)
-	print(post)
+	return post
 
 post_data = {
 	'title': 'Python and MongoDB',
