@@ -70,6 +70,9 @@ def my_form_post():
     for food_data in queries:
     	food_names.append(food_data["food_name"])
     #new_doc = {"name":name, "age":age, "gender":gender, "race":race, "food_log": {current_time: }}
+    labels = ["January","February","March","April","May","June","July","August"]
+	values = [10,9,8,7,6,4,7,8]
+	scat_values = {1:6, 2:5, 3:4}
     return render_template('index_choose_food.html', options=food_names, new=n, username=client_name, values=values, labels=labels, scatter_values=scat_values)
 
 if __name__ == "__main__":
