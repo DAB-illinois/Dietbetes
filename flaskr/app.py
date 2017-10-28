@@ -95,7 +95,7 @@ def choose_food():
 	return render_template('choose_food.html', results=food_names, username=client_name, values=values, labels=labels, scatter_values=scat_values)
 
 @app.route('/choose_food/', methods=['POST'])
-def choose_food():
+def choose_food_post():
 	global client_name, queries
 	food_name = request.form['type_food']
 	data = {}
