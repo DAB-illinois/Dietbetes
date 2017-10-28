@@ -70,6 +70,7 @@ def main():
 
 @app.route('/main/', methods=['POST'])
 def my_form_post():
+    global queries
     food = request.form['food']
     serving_size = request.form['serving_size']
     if food == "" or serving_size == "":
@@ -77,18 +78,32 @@ def my_form_post():
 
     #current_time = str(datetime.now())
     queries = fatsecret_api.search_food(food)
-    food_names = []
-    for food_data in queries:
-    	food_names.append(food_data["food_name"])
 
-    return redirect(url_for('choose_food_post'))
+    return redirect(url_for('choose_food'))
 
 @app.route('/choose_food/')
-def choose_food_post():
+def choose_food():
+	global client_name, queries
 	labels = ["January","February","March","April","May","June","July","August"]
 	values = [10,9,8,7,6,4,7,8]
 	scat_values = {1:6, 2:5, 3:4}
+
+	food_names = []
+	for food_data in queries:
+		food_names.append(food_data["food_name"])
+
 	return render_template('choose_food.html', results=food_names, username=client_name, values=values, labels=labels, scatter_values=scat_values)
+
+@app.route('/choose_food/', methods=['POST'])
+def choose_food():
+	global client_name, queries
+	food_name = request.form['type_food']
+	data = {}
+	for food_data in queries:
+		if food_name == food_data["food_name"]:
+			data = food_data
+
+	return data
 
 
 if __name__ == "__main__":
