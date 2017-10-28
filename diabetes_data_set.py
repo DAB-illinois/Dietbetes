@@ -26,7 +26,15 @@ def getDiabeticData():
 				count += (int)(iterator)
 				iterator = 0
 
-	print(imptAttributes)
+	check = []
+	temp = []
+	for x in range(0,len(imptAttributes) - 1):
+		temp.append(imptAttributes[x])
+		if (x + 1) % 4 == 0:
+			check.append(temp)
+			temp = []
+
+	print(check)
 
 def imptAttCalc(count):
 	return (50 * count)
