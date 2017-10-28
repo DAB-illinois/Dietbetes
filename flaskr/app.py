@@ -60,7 +60,7 @@ def new_user_input():
 
 @app.route('/main/')
 def main():
-	global client_name, n
+	global client_name
 	# doc = retrieve({"author":"Brandon"}, db.posts)
 	# print(doc)
 	labels = ["January","February","March","April","May","June","July","August"]
