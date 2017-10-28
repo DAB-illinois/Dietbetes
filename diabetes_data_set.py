@@ -76,7 +76,7 @@ def get_race():
 	race = []
 
 	for x in diabetic_data:
-		if x[0] not in race:
+		if x[0] not in race and x[0] != "?":
 			race.append(x[0])
 	
 	return race
@@ -103,10 +103,9 @@ def get_age(race, sex):
 	return age
 
 def get_a1c(race, sex):
-	collection = diabetic_data
 	a1c = []
 
-	for x in collection:
+	for x in diabetic_data:
 		if x[0] == race or x[1] == sex:
 			current_a1c = (int)(x[3][1:])
 			a1c.append(current_a1c)
@@ -116,17 +115,6 @@ def get_a1c(race, sex):
 def main():
 	collection = diabetic_data
 	mean = get_mean()
-	#print(change_to_mean())
+	print(get_race())
 change_to_mean()
-# main()
-
-# def getData2():
-# 	collection = []
-# 	with open("file1-mto_nejm_puf_cells_20131025.dta", "rb") as f:
-# 		byte = f.read(1)
-# 		while byte != "":
-# 			collection.append(byte)
-#         	# Do stuff with byte.
-# 			byte = f.read(1)
-# 			print(byte)
-# 	print(collection)
+main()
