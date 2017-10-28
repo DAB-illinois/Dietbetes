@@ -1,0 +1,30 @@
+
+input[type=submit] {
+	background:#ffffff;
+	width: 20%;
+	display: block;
+	margin: 0 auto;
+	font-size: 20px;
+	border-bottom: 2px solid rgba(47, 198, 47, 1);
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+	font-family: 'Slabo 27px', serif;
+}
+
+@keyframes fade-in {
+    0% {
+        background: rgba(47, 198, 47, 0);
+    }
+    60% {
+        background: rgba(47, 198, 47, .8);
+    }
+    100% {
+        background: rgba(47, 198, 47, 1);
+    }
+}
+
+input[type=submit]:hover{
+	animation: fade-in 1s ease;
+	background: rgba(47, 198, 47, 1);
+}
