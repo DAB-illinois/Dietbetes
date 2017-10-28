@@ -17,6 +17,10 @@ h1 {
     color: white;
 }
 
+h1:hover{
+    color:blue;
+}
+
 form {
     margin: 5%;
     width: 90%;
