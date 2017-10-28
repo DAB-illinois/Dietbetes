@@ -19,7 +19,6 @@ import fatsecret_crawl
 def add(dic):
 	posts = db[TABLE_NAME]
 	result = posts.insert_one(dic)
-	print('One post: {0}'.format(result.inserted_id))
 
 def update(user_id, dic):
 	posts = db[TABLE_NAME]
@@ -68,7 +67,7 @@ def main():
 	labels = ["January","February","March","April","May","June","July","August"]
 	values = [10,9,8,7,6,4,7,8]
 
-	self_data = retrieve({"name":client_name}, db[TABLE_NAME])
+	self_data = retrieve(client_name, db[TABLE_NAME])
 	self_race = self_data['race']
 	self_gender = self_data['gender']
 	diabetes_db_data = db[DIABETES_SET_TABLE].find_one({"race/gender":self_race.lower()+","+self_gender.lower()})
