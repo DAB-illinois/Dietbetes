@@ -29,7 +29,7 @@ def get_start_end_index(html, index_to_get):
 
 gi_data = {}
 
-for i in range(1, MAX_INDEX):
+for i in range(1, 3):
 	print(i)
 	url = base_url + str(i)
 
@@ -40,7 +40,7 @@ for i in range(1, MAX_INDEX):
 		continue
 
 	name = get_start_end_index(html, NAME_STRING).split(",")[0]
-	gi_index = get_start_end_index(html, GI_STRING)
+	gi_index = float(get_start_end_index(html, GI_STRING))
 
 	if name in gi_data:
 		gi_data[name].append(gi_index)
