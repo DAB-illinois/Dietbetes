@@ -44,7 +44,7 @@ Vanilla pudding:40.0
 Brown beans:38.0
 Original Long Grain:48.0
 Barley:35.66
-Chocolate weight management drink :31.0
+Chocolate weight management drink:31.0
 Poppin Lite Microwave Popcorn:67.0
 Bürgen® Fruit and Muesli bread:53.0
 Baked beans:56.0
@@ -71,9 +71,9 @@ California white potatoes:72.0
 Bürgen® Fruit loaf bread:44.0
 Ice cream (half vanilla:68.5
 S-26™ infant formula:36.0
-Apple baby food :46.0
+Apple baby food:46.0
 Japonica white rice and pre-germinated Japonica brown rice (ratio 1/2):64.0
-White rice with salted dried plum (umeboshi) :80.0
+White rice with salted dried plum (umeboshi):80.0
 Plum:38.5
 Fruit and Spice Loaf bread:54.0
 Instant/puffed rice:46.0
@@ -88,7 +88,7 @@ Breadfruit (Artocarpus altilis):61.4
 Power Bar®:55.5
 Pea:44.75
 Prince Edward Island:61.0
-Corn tortilla :52.0
+Corn tortilla:52.0
 Maris Peer potato:94.0
 Glucerna Chocolate Graham nutritional supplement bar (Ross Nutrition:20.0
 Snack bar:38.5
@@ -97,8 +97,8 @@ Vanilla cake:42.0
 SoLo GI Chocolate Charger Snack bar (New Era Nutrition Inc:28.0
 Gluten Free Low GI White bread (Country Life Bakery:40.0
 Hazelnut & Apricot bar:42.0
-Lotus root powder :33.0
-Rye crispbread :63.0
+Lotus root powder:33.0
+Rye crispbread:63.0
 Healthy Choice™ Hearty 100% Whole Grain bread:62.0
 Petit LU Normand cookies:51.0
 Sponge cake:46.0
@@ -108,13 +108,13 @@ Lindt Lindor White Chocolate:34.0
 Mixed berry:36.0
 Crusty malted wheat bread:52.0
 Pita bread:63.4
-Choice grain crackers :49.0
+Choice grain crackers:49.0
 Nougat:32.0
 Bürgen® Soy-Lin:44.0
 Tropical dried fruit snack:41.0
 Millet/Ragi:68.0
 Herman Brot Lower Carb Bread:24.0
-Raisins :65.0
+Raisins:65.0
 Rice gruel with dried algae (Satou Co Ltd.:81.0
 Farex™ baby rice:95.0
 Shredded Wheat breakfast cereal:67.0
@@ -143,9 +143,9 @@ Lungkow beanthread noodles (National Cereals:26.0
 Sultanas:56.0
 Fettucine:39.5
 Old-Fashioned Steel Cut Oats:57.0
-Wheat tortilla served with refried pinto beans and tomato sauce :28.0
+Wheat tortilla served with refried pinto beans and tomato sauce:28.0
 Tomato and Herb Chicken (entrée):29.0
-White rice with sea algae rolled in sheet of toasted  sea algae :77.0
+White rice with sea algae rolled in sheet of toasted  sea algae:77.0
 Heavenly Honey flavor:32.0
 White bread consumed with 5 g Sunfibre (Taiyo Kagaku Co:49.0
 Fruit and Fibre™ breakfast cereal consumed with 150 mL semi-skimmed milk:61.0
@@ -160,9 +160,9 @@ Hi-Lite™ breakfast cereal:54.0
 Lean Cuisine Steam Satay Beef with Rice:44.0
 Herman Brot Red Fruits Protein Muesli:32.0
 President's Choice® Blue Menu™ Ancient Grains snack crackers:65.0
-Parboiled rice :60.0
+Parboiled rice:60.0
 Fruit Cocktail:55.0
-White rice with pickled vinegar and cucumber  (pickled food eaten with rice) :61.0
+White rice with pickled vinegar and cucumber  (pickled food eaten with rice):61.0
 Rich Tea cookies:47.5
 Allsport®:53.0
 Devondale Smoothies Banana & Honey:28.0
@@ -171,27 +171,27 @@ Japanese Tamari Rice & Corn Crisps:91.0
 President's Choice® Blue Menu™ Wheat & Onion snack crackers:65.0
 Evergreen met Krenten:66.0
 Apple Fruit Bar:90.0
-Weetabix™ wheat biscuits (plain flaked wheat) :75.0
+Weetabix™ wheat biscuits (plain flaked wheat):75.0
 Yakult® Light:36.0
 Low-fat (0.9%) yoghurt:31.0
 Sustagen™ Hospital with extra fiber:33.0
 Chewy Chocolate Chip & Marshmallow Granola Bar:78.0
 Cornflakes™ breakfast cereal (Kellogg's:92.0
-Curry rice with cheese :55.0
+Curry rice with cheese:55.0
 Klosterbrot wholemeal rye bread (Dimpflmeier Bakery Ltd.:67.0
 Vogel's Cluster Crunch:43.0
 Melawach + 15 g maize cob fiber (insoluble):59.0
 Bran cereal:43.0
 SunRice Low GI White Rice:54.0
-Wholemeal barley flour porridge breakfast cereal (100% regular barley) (flour:water = 1:3):68.0
+Wholemeal barley flour porridge breakfast cereal (100% regular barley) (flour water = 1/3):68.0
 White bread with 15 g Sunfibre (Cyamoposis tetragonolobus) (Indian cluster guar beans):46.5
 Vitasnella frollini cookies:59.0
-Kidney bean (Phaseolus vulgaris) stew and plantain (Musa paradisiaca) :48.0
+Kidney bean (Phaseolus vulgaris) stew and plantain (Musa paradisiaca):48.0
 White potato:47.5
 Snack Right Fruit Slice:48.0
 Lean Cuisine Steam Slow Cooked Beef:40.0
 White bread (30 g):42.5
-Seeded bread :49.0
+Seeded bread:49.0
 Ryvita® Sunflower Seeds & Oats:48.0
 Traditional French baguette (prepared with wheat flour:69.0
 Sausages:28.0
@@ -241,20 +241,20 @@ Carman's Classic Fruit & Nut Muesli:50.0
 Carman's Deluxe Gluten Free Muesli:49.0
 Bürgen™ Dark/Swiss rye bread (Tip Top Bakeries:74.0
 Mung bean noodles (Longkou beanthread):39.0
-Chicken and mushroom soup :57.5
+Chicken and mushroom soup:57.5
 Prince fourré chocolat cookies:51.5
 Peanut Butter flavor:27.5
 Nutrimeal™ Free Vanilla beverage powder prepared with water:49.0
 President's Choice® Blue Menu™ Wheat snack snack crackers:65.0
 ExtendBar™ Apple Cinnamon Delight Bar  (ExtendBar:33.0
 Brown:58.0
-Fish fingers :38.0
+Fish fingers:38.0
 Custard apple:54.0
 Muesli bread:54.0
 Cream of Wheat™:74.0
 Chocolate chip muffin:52.0
 Oat porridge made from roasted thin (0.5 mm) dehulled oat flakes:69.0
-Oat porridge made from steamed thick (1.0 mm) dehulled oat flakes :53.0
+Oat porridge made from steamed thick (1.0 mm) dehulled oat flakes:53.0
 Lentil:57.0
 Jalna Premium Vanilla Creamy yoghurt:18.0
 Marshmallows (Candy Lane:62.0
@@ -266,10 +266,10 @@ Chocapic™ breakfast cereal:76.0
 Banana cake:51.0
 French fries:69.5
 Parboiled rice:54.36
-White bread eaten with powdered dried  seaweed (Nori alga) :48.0
-Sourdough wheat bread :54.0
+White bread eaten with powdered dried  seaweed (Nori alga):48.0
+Sourdough wheat bread:54.0
 Nardine potato:70.0
-Buckwheat noodles :59.0
+Buckwheat noodles:59.0
 Petit brun extra cookies:77.0
 45 g Oat bran (containing 6 g ß-glucan):64.0
 Sustagen™:31.0
@@ -278,14 +278,14 @@ Milkshake made from Chocollo™:21.0
 Lean Cuisine Steam Indian Style Butter Chicken with Rice:43.0
 ReduceXS™ Chocolate Deluxe formulated meal replacement powder:10.0
 Gnocchi:68.0
-Breadfruit (Artocarpus altilis) :68.0
+Breadfruit (Artocarpus altilis):68.0
 Tamar Valley No Added Sugar Natural yoghurt:17.0
 Bangladeshi rice variety BR4:33.0
 Cereal bar:36.0
 Paw paw (papaya):60.0
 3 Grain Bread:55.0
 Bürgen® Pumpkin Seed bread:49.0
-White and wholemeal bread (ratio 1:1):54.0
+White and wholemeal bread (ratio 1/1):54.0
 Penne pasta:43.0
 Microwave Popping Corn:65.0
 Yam:37.0
@@ -305,7 +305,7 @@ Mango:45.0
 Burger Rings™:90.0
 Golden Fruit cookies (Griffin's Foods Ltd.:77.0
 Hi-Bran Weet-Bix™ wheat biscuits with extra wheat bran:61.0
-Beetroot :64.0
+Beetroot:64.0
 Yoplait™ No Fat berry fruit flavors:16.0
 Stone Baked Whole Wheat Pizza - Vegetable:54.0
 Peanut Butter weight management bar:22.0
@@ -325,17 +325,17 @@ Hazelnut:36.0
 Lactona Dia-β beverage powder (tested prepared with water):27.0
 Lucea yam (Dioscorea rotunda):74.0
 Yellow Curry Chicken (entrée):25.0
-Peanuts :18.0
+Peanuts:18.0
 Bran Buds with psyllium breakfast cereal (Kellogg's Inc.:47.0
 Nutella®:29.33
 Sebago potato:87.0
 Thé cookies:41.0
 Plum + Fe Soy Joy Bar (Otsuka Pharmaceutical Co Ltd:25.0
 Melba toast:70.0
-White bread eaten with 18 g white vinegar  (6% acetic acid) :63.0
+White bread eaten with 18 g white vinegar  (6% acetic acid):63.0
 Puffed:74.0
 Butterscotch:36.0
-Devondale Fast Start Chocolate Liquid Breakfast :39.0
+Devondale Fast Start Chocolate Liquid Breakfast:39.0
 M & M's®:33.0
 White bread eaten with vinegar as vinaigrette:45.0
 Whole-wheat snack bread (Ryvita Co Ltd.:74.0
@@ -387,14 +387,14 @@ Baked Beans in Tomato sauce:48.5
 Black eyed beans/peas (Cowpeas):41.5
 Tuna fish bun (Maxim's MX:46.0
 Flan cake (Weston's Bakery:65.0
-Pumpernickel bread :56.0
+Pumpernickel bread:56.0
 White bread with Haricot/navy beans:54.0
 Dark Red Kidney beans:43.0
 Peanuts:7.0
 Corn Pops™ breakfast cereal:80.0
 Porridge (rice and wheat flour):54.0
 Continental™ Wholegrain Pasta & Sauce:36.33
-Scalded spelt wheat kernel bread :67.0
+Scalded spelt wheat kernel bread:67.0
 Froot Loops™ breakfast cereal:69.0
 Sliced Apples:42.0
 Lean Cuisine Steam Indian Chicken Tikka Masala:44.0
@@ -437,7 +437,7 @@ Marrowfat peas:39.0
 Gram dhal soaked overnight:5.0
 Wholemeal flour:66.0
 Millet/Ragi (Eleucine coracana) flour eaten as roasted bread:104.0
-Swede (rutabaga) :72.0
+Swede (rutabaga):72.0
 Cookies & Crème flavor:50.0
 Red potatoes:89.0
 Lite-Bix™:70.0
@@ -451,7 +451,7 @@ Pelde:93.0
 Volkornbrot:56.0
 Japonica rice enriched with 3 g Sunfibre (Cyamoposis tetragonolobus) (soluble fiber):54.0
 Enercal Plus™ nutritional support product:61.0
-Sweet corn :59.0
+Sweet corn:59.0
 Viplus Diabetic formula (Vanilla Flavour) prepared with water:42.0
 Berrynice Yoghurt Crunch (low fat yoghurt:43.0
 Lentil and Bean Vegetable Patties:54.0
@@ -463,12 +463,12 @@ Tagliatelle:50.0
 White bread with butter:59.0
 25 g Maltidex 100 (> 72% maltitol) (Cerestar:44.0
 Noodle soup (traditional Turkish soup with stock and noodles):1.0
-Spaghetti served with pressure-cooked white beans and an orange :77.0
+Spaghetti served with pressure-cooked white beans and an orange:77.0
 Apricot Soy Joy Bar (Otsuka Pharmaceutical Co Ltd:27.0
 Buckwheat groats:45.0
 Lucea yam:77.0
 Vogel's Café Style Fibre-Rich Muesli:48.0
-Wild berry dried fruit snack :35.0
+Wild berry dried fruit snack:35.0
 Light rye (Silverstein's Bakery:68.0
 New potato:64.75
 Snack Right Fruit Pillow:46.66
@@ -478,7 +478,7 @@ Wonderwhite™ bread (Buttercup Bakeries:80.0
 Stuffed grapevine leaves (rice and lamb stuffing  with tomato sauce):30.0
 Tropical fruit and nut mix (Finest:49.0
 Novasource Diabet®:26.0
-Wholemeal high-fiber barley flour porridge breakfast cereal (50% barley flour: 50% high-fiber barley flour):55.0
+Wholemeal high-fiber barley flour porridge breakfast cereal (50% barley flour 50% high-fiber barley flour):55.0
 Mandarin segments:47.0
 Chicken korma and peshwari rice:44.0
 Ryvita® Pumpkin Seeds & Oats:46.0
@@ -524,13 +524,13 @@ Maltmeal wafer:50.0
 25 g lactitol MC (Danisco sweeteners:3.0
 Fortimel® enteral formula:25.0
 White chocolate mousse:40.0
-Maize meal porridge/gruel :109.0
+Maize meal porridge/gruel:109.0
 Long Grain and Wild:49.0
 Vogel's Cluster Crunch Classic breakfast cereal:50.0
 Instant sweet milky bun:67.0
 Laddu (popped amaranth:26.5
 Kidney beans (Phaseolus vulgaris L.):29.5
-Instant oat cereal porridge prepared with water :83.0
+Instant oat cereal porridge prepared with water:83.0
 Milo™ Breakfast Smoothie powder:39.0
 Wholemeal barley flour (80%) bread with sourdough (lactic acid):53.0
 Herbalife Formula 1 Nutritional Shake Mix - Berry:21.0
@@ -549,9 +549,9 @@ Classic French baguette (prepared with wheat flour:80.5
 Pain au lait bread:63.0
 Jowar:77.0
 Parsnips:52.0
-White rice topped with raw egg and soy sauce :72.0
+White rice topped with raw egg and soy sauce:72.0
 Gruel (wholemeal wheat:47.0
-Brown rice :66.0
+Brown rice:66.0
 Honey Soy Beef with Wholemeal Noodles:53.0
 Apricot dried fruit snack:42.0
 President's Choice® Blue Menu™ Whole Wheat spaghetti (Loblaw Brands Limited:45.0
@@ -560,7 +560,7 @@ Bakers Delight™ Hi Fibre Lo GI white bread:52.0
 Split Pea soup (Wil-Pak Foods:60.0
 Yam (Dyscoria species) eaten with fish:66.0
 Branflakes consumed with 150 mL semi-skimmed milk:76.0
-Rice cake :82.0
+Rice cake:82.0
 Arrowroot cookies (McCormicks's:63.0
 Pretzels:83.5
 Soba noodles:46.0
@@ -568,14 +568,14 @@ Fried fritter (Ocean Empire International Ltd:69.0
 Divine Date spread:29.0
 K-Time Strawberry Crunch™ bar:77.0
 Japonica:70.2
-Kidney beans :32.66
+Kidney beans:32.66
 Cassava:46.0
 SmartZone Crunchy Chocolate Peanut Butter flavor:14.0
 Instant rice:76.75
 Pineapple pieces:49.0
 Chocolate Healtheries Simple bar:35.0
 SuperJuice Kickstart:39.0
-White rice and non-sugar yoghurt (yoghurt eaten before rice)  :59.0
+White rice and non-sugar yoghurt (yoghurt eaten before rice) :59.0
 Stay Trim™:70.0
 Vogel's Wonder White 'Low GI' white bread:56.5
 Kibbled Konini bread (Country Fare brand:68.0
@@ -585,7 +585,7 @@ Round leaf yellow yam:80.0
 Four bean mix:37.0
 Ice fruit confection:59.0
 Fruche® on Fruit:47.0
-White bread containing Eurylon® high-amylose maize starch :42.0
+White bread containing Eurylon® high-amylose maize starch:42.0
 All-Bran™:50.0
 Peas:22.0
 Cranberries:62.0
@@ -594,7 +594,7 @@ Cupcake:73.0
 Cream Cracker:65.0
 Karicare™ gold starter infant formula with omega plus LCP oils:35.0
 French Vanilla Isowhey Complete meal replacement beverage (FIT Bioceuticals Pty Ltd):30.0
-White rice with low-fat milk :69.0
+White rice with low-fat milk:69.0
 Tapioca boiled with milk (General Mills Canada Inc.:81.0
 Hamburger bun (Loblaw's:61.0
 Nectarines:43.0
@@ -626,15 +626,15 @@ Mung bean (Phaseolus areus Roxb):31.0
 Koshihikari rice:67.0
 Bran Flakes™ breakfast cereal:74.0
 New:65.0
-Yam :52.5
+Yam:52.5
 Bebe Dobre Rano with Milk cookies:50.0
-Multigrain batch bread :62.0
+Multigrain batch bread:62.0
 Honey & Roasted Almond flavor:41.0
-Golden Syrup :63.0
+Golden Syrup:63.0
 Rajmah:19.0
 Cornflakes:73.0
 25 g glucose (Glucodex) consumed 40 min after 3 g American dried ginseng (Panax quinquefolius L.):80.0
-White bread roll + 3 mg trestatin (pancreatic alpha-amylase inhibitor) :48.0
+White bread roll + 3 mg trestatin (pancreatic alpha-amylase inhibitor):48.0
 Sunshine™ soy protein chips:87.0
 French fries (Ica Handlarna:54.0
 Vita-Brits™ wheat biscuits (plain flaked wheat):64.5
@@ -652,10 +652,10 @@ Sunbrown Quick™ brown rice:80.0
 Lemon weight management bar L.E.A.N™ products Harvest Oat:32.0
 Macaroons:32.5
 Hot oat cereal (30 g):45.4
-Apricot and Almond bar :34.0
-Plantain (Musa AAB) :68.0
+Apricot and Almond bar:34.0
+Plantain (Musa AAB):68.0
 Pinhao:45.0
-Buckwheat :54.33
+Buckwheat:54.33
 Bebe Dobre Rano Nuts and Honey cookies:43.0
 Puffed rice cakes:82.0
 Mung bean:40.0
@@ -677,8 +677,8 @@ Tapioca:93.0
 Strawberry:32.0
 Chinese herbal jelly (Guang Jian Tang brand:47.0
 Spicy Black Bean Instant soup:57.0
-French baguette bread with butter and strawberry jam :62.0
-Rice (Oriza sativa) and tomato soup :46.0
+French baguette bread with butter and strawberry jam:62.0
+Rice (Oriza sativa) and tomato soup:46.0
 SuperJuice Immune:47.0
 Herman Brot Chocolate Protein Muesli:35.0
 Mixed nuts and raisins:21.0
@@ -695,7 +695,7 @@ Figs:61.0
 Capilano Premium Honey:51.0
 Sirloin chop with mixed vegetables and mashed potato:66.0
 Rice bread:66.5
-Potato crisps :60.0
+Potato crisps:60.0
 Jelly beans:78.0
 Maltitol:26.0
 Vitalise Multivitamin Cultured Milk Fruit Drink:24.0
@@ -705,7 +705,7 @@ Morning Coffee™ cookies:79.0
 Multi Grain Crunch flavor:50.0
 Rye kernel bread:55.0
 Fruit and nut mix (Finest:15.0
-Rye crackers with oats :64.0
+Rye crackers with oats:64.0
 LoGiCane low GI sugar:50.0
 Green banana:36.66
 Gran'Dia Chocolate with five cereals:39.0
@@ -714,7 +714,7 @@ Nutridrink (Nutricia N.V.:25.0
 Organic Rice Syrup/Rice Malt Syrup:98.0
 President's Choice® Blue Menu™ Wheat & Sesame snack crackers:56.0
 LU Petit Dejeuner Multicereals cookies:46.0
-Cornmeal porridge :68.0
+Cornmeal porridge:68.0
 Potato (Solanum Tuberosum):65.0
 White Bread (Wonder Bread) (140 g):49.66
 White rice:66.17
@@ -743,9 +743,9 @@ Burrito (made from scrambled eggs:33.0
 ZonePerfect Nutrition bar:44.0
 Grape Nectar:52.0
 Oat bran flour (Natureal® GI-flour:40.0
-Parboiled rice consumed with 68 g cheese and 14 g butter :27.0
+Parboiled rice consumed with 68 g cheese and 14 g butter:27.0
 Indian Lentil Instant soup:62.0
-Cumberland pie :29.0
+Cumberland pie:29.0
 Special K™ breakfast cereal:69.0
 Flaxseed Tortilla chips:64.0
 2014 Maxim's Low Sugar White Lotus Seed Paste (Salted Egg Yolk) Mooncake:29.0
@@ -761,7 +761,7 @@ Prince Petit Déjeuner Vanille cookies:45.0
 Wheat bread:67.66
 Carman's Natural Bircher Muesli:48.0
 Banana:53.93
-Wheat tortilla :30.0
+Wheat tortilla:30.0
 Araucaria bidwillii (bunya tree nut):47.0
 Instant porridge:69.0
 Baked Beans:40.0
@@ -790,7 +790,7 @@ Acorns (Quercus emoryi):16.0
 Trim Bar:25.0
 Steamed potato dumplings (60% white potatoes:52.0
 Salted meat rice dumpling (Ocean Empire International Ltd:69.0
-Vegetable soup :60.0
+Vegetable soup:60.0
 Wheat flour flatbread:66.0
 Apricot & apple fruit strips:29.0
 Véritable Petit Beurre cookies:53.0
@@ -798,12 +798,12 @@ Cherries:42.0
 Nestlé Combo mousse:42.0
 Puttu (rice flour:79.0
 Nutrimeal™:24.25
-Lentil and cauliflower cury with rice :60.0
-Locust honey :32.0
+Lentil and cauliflower cury with rice:60.0
+Locust honey:32.0
 Dumpling:28.0
 Peach & Grapes:46.0
 Semolina:54.5
-Glutinous rice cake with dried sea algae :83.0
+Glutinous rice cake with dried sea algae:83.0
 White yam (Dyscoria species):65.0
 Pigeon Pea (Cajanus cajan Linn. Huth.):22.0
 Garden vegetable soup with peppers and croutons:20.0
@@ -818,13 +818,13 @@ Instant oatmeal porridge:83.0
 Sustagen™ Instant Pudding:27.0
 Isomaltulose:32.0
 Chocolate crinkles:48.5
-Lentil and cauliflower curry with rice :60.0
+Lentil and cauliflower curry with rice:60.0
 Karo Dark Corn Syrup:90.0
 Barley flakes breakfast cereal:69.0
 Cotton honey:74.0
 Jevity™ HiCal:59.0
 Apple juice:41.0
-Rice Bubbles™ :85.0
+Rice Bubbles™:85.0
 Pura™ Skimmer milk:20.0
 Croissant (Food City:67.0
 Györi Édes Jó reggelt! Müzlivel és gyümölccsel / Fruits and Muesli:47.0
@@ -839,7 +839,7 @@ Leda Luxury gluten-free chocolate coated cookies:35.0
 45% oat bran and 50% wheat flour bread:50.0
 Lean Cuisine Steam Sundried Tomato Chicken with Pasta:38.0
 Pan de sal (sweet bread roll):64.5
-White bread with Haricot/navy beans :42.0
+White bread with Haricot/navy beans:42.0
 "Pineapple" bun (Hoixe Cake Shop:65.0
 Apple Berry crumble cake:41.0
 Strawberry fruit leather (Stretch Island Fruit Company™:29.0
@@ -852,7 +852,7 @@ Boost High-Protein®:59.0
 White/wholemeal wheat bread with peanut butter:59.0
 Oat bar:59.0
 Raspberry Pomegranate muffin:58.0
-Cottage pie :65.0
+Cottage pie:65.0
 Yoplait™ No Fat tropical fruit flavors:20.0
 Life Savers®:70.0
 Sadha roti (leavened wheat-based bread):65.0
@@ -864,7 +864,7 @@ Tagatose sugar replacement:3.0
 Plum + Folic acid Soy Joy Bar (Otsuka Pharmaceutical Co Ltd:27.0
 Sultana Bran (Healthy Living:90.0
 Shredded Wheatmeal™ cookies:62.0
-Puffed rice squares :77.0
+Puffed rice squares:77.0
 Trim bar:31.0
 Maris Piper potato:85.0
 Nestlé Milo flavored mousse:46.0
@@ -872,12 +872,12 @@ Uppuma kedgeree (millet:18.5
 Provide™ nutritious beverage powder:28.0
 Middle Eastern flatbread:97.0
 Wild Oats Cluster Crunch Hazelnut Chocolate breakfast cereal:43.0
-Wholemeal spelt wheat bread :63.0
+Wholemeal spelt wheat bread:63.0
 Creamed rice porridge:59.0
 Apple:40.4
 Double chocolate muffin:46.0
-White bread + 15 g psyllium fiber (Plantago psyllium)  :65.0
-Millet flour porridge :107.0
+White bread + 15 g psyllium fiber (Plantago psyllium) :65.0
+Millet flour porridge:107.0
 Marfona potato:56.0
 Castanospermum austral (blackbean seed):8.0
 Fruit & Yogurt Apple Cinnamon Chewy Bars (Soy):34.0
@@ -922,7 +922,7 @@ Biosorb® drink:50.0
 Medium Grain rice:82.0
 Ensure™ Hospital:51.0
 Muesli bar:61.0
-Rice porridge :81.66
+Rice porridge:81.66
 Rush® Wicked Latte flavored milk:26.0
 Heinz Kidz™ Fruit Fingers:61.0
 Green bean dessert (NISSIN brand:54.0
@@ -974,7 +974,7 @@ Ensure Pudding™ nutritional support product:36.0
 MET-Rx Bar:74.0
 Steak and ale with cheddar mash potato convenience meal:48.0
 Lactitol:-1.0
-Sourdough rye bread :48.0
+Sourdough rye bread:48.0
 Rush® Intense Coffee flavored milk:24.0
 Just Right Just Grains™ breakfast cereal:62.0
 Pasta bake:23.0
@@ -982,13 +982,13 @@ Fruit punch beverage:67.0
 Apricot 100% Pure Fruit spread:43.0
 Mars Bar® (M&M/Mars:68.0
 Cornmeal + margarine:69.0
-Amaranth : wheat (25:75) flour flatbread:66.0
+Amaranth wheat (25:75) flour flatbread:66.0
 Cocoavia™ Chocolate Covered Almonds:21.0
 Instant oat porridge:82.0
 Black beans:30.0
 Poori (deep-fried wheat flour dough) with potato palya (mashed potato):82.0
 Negro yam:73.0
-Saskatchewan wild rice :57.0
+Saskatchewan wild rice:57.0
 Soytana™ breakfast cereal:49.0
 Carman's Original Fruit Free Muesli:45.0
 SunRice Steamed Low GI White Rice:52.0
@@ -996,9 +996,9 @@ Instant mashed potato:66.0
 Long Grain rice:76.0
 Chocolate:37.6
 Glucerna SR:23.0
-Multigrain (50% kibbled wheat grain) bread :43.0
-White wheat flour flatbread :79.0
-Roti/chappati :59.0
+Multigrain (50% kibbled wheat grain) bread:43.0
+White wheat flour flatbread:79.0
+Roti/chappati:59.0
 Sweet yam:82.0
 Jyväshyvä Paussi Vanilla cookies:47.0
 Prince Meganana Chocolate cookies:49.0
@@ -1013,7 +1013,7 @@ Oranges (Sunkist:48.0
 L.E.A.N Fibergy™ bar:45.0
 Cocoavia™ Chocolate Almond Snack bar (M&M/Mars:63.0
 Rice noodles made from IR42 (high amylose) rice flour:44.0
-White bread roll with cheese :50.0
+White bread roll with cheese:50.0
 Dates:40.29
 Medium grain white rice:75.0
 Rice vermicelli:58.0
@@ -1024,7 +1024,7 @@ Tomato juice:31.33
 ALDI Dairy Dream Diet Deli Natural yoghurt:17.0
 Russet Burbank potatoes:84.75
 Good Start™:68.0
-50% oat bran bread :44.0
+50% oat bran bread:44.0
 White bread (100% wheat flour) + 2% pectin:85.0
 Milled (white):57.63
 Custard:34.0
@@ -1034,7 +1034,7 @@ Tofu-based frozen dessert:115.0
 Strawberry Banana frozen yoghurt:55.0
 Whole-kernel rye bread:57.0
 Diben®:22.0
-Wholemeal oat flour porridge (flour:water = 1:3):74.0
+Wholemeal oat flour porridge (flour/water = 1/3):74.0
 Jasmine Fragrant rice:79.0
 Lean Cuisine Steam Cheese & Cracked Pepper Chicken with Pasta:51.0
 Bulgur cracked wheat:47.4
@@ -1049,7 +1049,7 @@ Wheat noodle:64.0
 Chicken McNuggets™ consumed with sweet Thai chilli sauce:55.0
 Rush® Heavenly Vanilla Malt flavored milk:31.0
 Herbalife Formula 1 Nutritional Shake Mix - Dutch Chocolate:19.0
-Wheat and rye bread (75% wheat flour + 10% rye flour + 15% wheat bran) :40.0
+Wheat and rye bread (75% wheat flour + 10% rye flour + 15% wheat bran):40.0
 Bluberries:53.0
 Bangladeshi white rice variety BR16:39.0
 Fruche®:35.0
@@ -1062,21 +1062,21 @@ Bürgen™ Mixed Grain bread:43.66
 Rye crackers with sesame:57.0
 Arborio:69.0
 Soy Crunch Multi-Grain Cereal:47.0
-Oat porridge made from roasted thick (1.0 mm) :50.0
+Oat porridge made from roasted thick (1.0 mm):50.0
 Sausages and mash potato:61.0
 Grany en-cas Abricot:55.0
 Apple and blackcurrant juice:45.0
 Mango Coconut Soy Joy Bar (Otsuka Pharmaceutical Co Ltd:28.0
-Amaranth : wheat (50:50) flour flatbread:76.0
+Amaranth wheat (50/50) flour flatbread:76.0
 Papaya/Paw paw:60.0
 New Potato:70.0
 Arrowroot plus cookies (McCormicks's:62.0
 Oat bran:54.5
 Twix® Cookie Bar:44.0
-Cumberland fish pie :40.0
+Cumberland fish pie:40.0
 Non-glutaminous rice flour:68.0
 SoyCarat Olive Oil & Garlic flavor snack product:41.0
-White rice with roasted ground soybean :56.0
+White rice with roasted ground soybean:56.0
 Sustagen Sport® beverage:43.0
 Hamburger (beef patty:66.0
 Luscious Berries flavor:29.0
@@ -1148,13 +1148,13 @@ Maharani Parboiled Long Grain Basmati rice:52.0
 Oatmeal cookies:54.0
 Barley Vegetable Instant soup:41.0
 Lees Cabin Crackers:60.0
-White bread with skim milk cheese :55.0
+White bread with skim milk cheese:55.0
 Apricots:37.79
 Coco yam (Xanthosoma spp.):61.0
 Puffed Wheat breakfast cereal:80.0
 Puffed Wheat (Quaker Oats Co.:67.0
 Wholemeal rye bread:58.0
-White bread + 200 mg acarbose (enzyme inhibitor) :50.0
+White bread + 200 mg acarbose (enzyme inhibitor):50.0
 Chico (Zapota zapotilla coville):40.0
 Hunger Filler™:59.0
 Kudos Whole-Grain bars:62.0
@@ -1180,7 +1180,7 @@ Ensure™ nutritional support product:49.0
 Kaiser rolls (Loblaw's:73.0
 President's Choice® Blue Menu™ Cranberry Orange Cookies:60.0
 Semolina (Triticum aestivum):65.5
-Yam (Dioscorea species) and groundnut (Arachis hypogaea) :50.0
+Yam (Dioscorea species) and groundnut (Arachis hypogaea):50.0
 Rye bread:78.0
 Jubilee Nuts and Honey cookies:44.5
 Malted milk powder in full-fat milk:45.0
@@ -1200,7 +1200,7 @@ Coco Pops™ breakfast cereal (cocoa flavored puffed rice):77.0
 Snickers Bar® (Mars Confectionery:41.0
 Burmese Vegetable Curry & rice:49.0
 Taro (Colocasia esculenta) peeled:54.0
-Ground beef served with rice and an orange :31.0
+Ground beef served with rice and an orange:31.0
 Vitasoy® rice milk:79.0
 White bread consumed with 10 g Sunfibre (Taiyo Kagaku Co:57.0
 Fanta®:68.0
@@ -1216,7 +1216,7 @@ Milo™ beverage powder:44.5
 Porridge (rice & wheat flour):46.0
 Spicy Thai Instant soup:56.0
 Ontario potato:63.66
-LU P'tit Déjeuner Chocolat cookies :42.0
+LU P'tit Déjeuner Chocolat cookies:42.0
 Bebe Dobre Rano Honey and Hazelnuts cookies:51.0
 SoLo GI Berry Bliss Snack bar (New Era Nutrition Inc:29.0
 Vanilla frozen yoghurt:46.0
@@ -1225,7 +1225,7 @@ Chapatti:56.66
 SunRice Low GI Brown Rice:54.0
 Low-fat yoghurt:37.91
 Udon noodles:57.33
-White rice with instant miso soup (soybean paste soup) :61.0
+White rice with instant miso soup (soybean paste soup):61.0
 V8® 100% vegetable juice:43.0
 Stoned Wheat Thins (Christie Brown & Co.:67.0
 Chocolate butterscotch muffin:53.0
@@ -1253,15 +1253,15 @@ Penne with Roasted Vegetables (entrée):39.0
 Oat porridge made from thick (1.0 mm) dehulled oat flakes:55.0
 Cornflakes breakfast cereal consumed with 150 mL semi-skimmed milk:93.0
 Bürgen™ Oat Bran & Honey Loaf bread with Barley:31.0
-Japonica white rice and pre-germinated Japonica brown rice (ratio 2:1) :67.0
+Japonica white rice and pre-germinated Japonica brown rice (ratio 2/1):67.0
 Nutrison Mutli fiber® enteral formula (Nutricia N.V.:28.0
-White rice with pickled vinegar and cucumber  (pickled food eaten before rice) :63.0
+White rice with pickled vinegar and cucumber  (pickled food eaten before rice):63.0
 75% cracked wheat kernels (bulgur) bread:48.0
 Pumpkin Soup:76.0
 Broken rice:86.0
 Vegetarian Chili Instant soup:36.0
 Cheela (thin savoury pancake made from legume  flour batter):40.25
-Mushroom stroganoff with rice :26.0
+Mushroom stroganoff with rice:26.0
 25 g Malbit CH (99% maltitol) (Cerestar:73.0
 Koki beans (Phaseolus vulgaris) and cassava (Manihot esculenta):52.0
 Lasagne:37.0
@@ -1280,7 +1280,7 @@ Jyväshyvä Paussi Mysli and Fruits cookies:47.0
 Chocolate Nut Burst flavor:32.0
 Chocolate Fudge Brownie flavor:20.0
 Cornflakes™ breakfast cereal (Kellogg's Inc.:86.0
-White rice and non-sugar yoghurt eaten together :58.0
+White rice and non-sugar yoghurt eaten together:58.0
 Cashew nut halves:27.0
 V8 Splash®:47.0
 Grapefruit juice:48.0
@@ -1304,7 +1304,7 @@ SICCON D2™ nutritious beverage powder:28.0
 Honey Goldies™ wheat biscuits with additional ingredients:72.0
 Millet/Ragi (Eleucine coracana):84.0
 Fusilli pasta twists:45.14
-Sultanas :57.0
+Sultanas:57.0
 100% Whole wheat Gigantico Hot Dog Rolls:62.0
 Oatmeal:69.0
 Healthwise™ for bowel health breakfast cereal:66.0
@@ -1322,7 +1322,7 @@ Tony Ferguson's Meal Replacement Shake:22.0
 Juice Plus+® Complete meal replacement powder:33.5
 Pound cake (Sara Lee Canada:54.0
 Pizza:51.0
-Popcorn :55.0
+Popcorn:55.0
 Honey Smacks™ breakfast cereal:71.0
 Cheerios™ breakfast cereal (General Mills Inc.:74.0
 Highland Oatcakes cookies (Walker's Shortbread Ltd.:57.0
@@ -1346,7 +1346,7 @@ Tortilla (Zea mays and Olneya tesota):38.0
 Burn-it™ bars:26.0
 Frozen sweet milky bun:72.0
 Poweraid®:65.0
-Wholemeal barley flour (80%) bread :70.0
+Wholemeal barley flour (80%) bread:70.0
 Butternut pumpkin:51.0
 Red bean dessert (NISSIN brand:75.0
 LU Petit Dejeuner Fruits and Muesli cookies:47.0
@@ -1359,7 +1359,7 @@ Rye Hi-Soy with Linseed bread:55.0
 Cornflakes (Sainsbury's:65.0
 Bran Chex™ breakfast cereal (Nabisco Brands Ltd.:58.0
 White bread with 10 g Sunfibre (Cyamoposis tetragonolobus) (Indian cluster guar beans):57.5
-Barley (Hordeum vulgare) :48.0
+Barley (Hordeum vulgare):48.0
 Principe megamanana vanilla cookies:45.0
 French baguette bread with chocolate spread:72.0
 Oat porridge made from 0.5-0.6 mm thick flakes:76.0
@@ -1378,7 +1378,7 @@ Pelde brown rice:76.0
 Yoghurt drink:38.0
 Sultana Bran™:68.5
 Prosure™:54.5
-Melawach :71.0
+Melawach:71.0
 LU Petit Dejeuner:51.0
 White bread consumed with 10 g Sunfibre (Taiyo Kagaku Co.:41.0
 Porridge (wholemeal wheat:51.0
@@ -1418,12 +1418,12 @@ LU Petit Dejeuner with Prunes cookies:51.0
 Oro cookies:61.0
 Danish:50.0
 Roasted rice ball (Satou Co Ltd.:77.0
-Kidney beans (Phaseolus vulgaris) :19.0
+Kidney beans (Phaseolus vulgaris):19.0
 Gelati:38.0
 Eddoe (Colocasia esculenta var. antiquorum):61.0
 Gem long grain rice:58.0
 Gluten Free Low GI White bread:53.0
-Brown beans :24.0
+Brown beans:24.0
 Cassava (Manihot esculenta):94.0
 Alpen original muesli:55.0
 Ravioli:39.0
@@ -1431,7 +1431,7 @@ Idli (parboiled and raw rice + black dhal:77.0
 Multigrain Loaf bread:54.0
 Poori (deep-fried wheat flour dough) with  potato palya (mashed potato):57.0
 Raisin Bran Flax muffin:52.0
-Wholemeal barley flour (80%) bread (20% white wheat flour) :67.0
+Wholemeal barley flour (80%) bread (20% white wheat flour):67.0
 Cornmeal:68.0
 Tortellini:50.0
 Black bean (Phaseolus vulgaris Linn):20.0
@@ -1444,20 +1444,20 @@ Ripe plantain (Musa paradisiaca):78.0
 Vegetarian Chili:39.0
 Honey Crunch cereal (30 g):54.0
 Hot oat cereal (30 g) prepared with 125 mL skim milk:43.5
-Rye bread (50% rye flour + 50% wheat flour) :50.0
+Rye bread (50% rye flour + 50% wheat flour):50.0
 Devondale Fast Start Vanilla Liquid Breakfast:49.0
 Oats:59.0
 Santa Fe:48.0
 Instant 'two-minute' noodles:48.66
-White bread eaten with 28 g white vinegar (6% acetic acid) :54.0
+White bread eaten with 28 g white vinegar (6% acetic acid):54.0
 Chocolate Daydream™ shake:29.0
 Apple and cherry juice:43.0
 Blueberry muffin:50.0
 100% durum semolina spaghetti:41.0
 Strawberry processed fruit bars:90.0
-LU P'tit Déjeuner Miel et Pépites Chocolat cookies :48.66
+LU P'tit Déjeuner Miel et Pépites Chocolat cookies:48.66
 Wheat based cereal biscuit:72.0
-Spaghetti served with beef tomato sauce  and an orange :42.0
+Spaghetti served with beef tomato sauce  and an orange:42.0
 Ski™:40.0
 Strawberry flavor:28.0
 Graham Wafers (Christie Brown & Co.:74.0
@@ -1468,7 +1468,7 @@ Pinto beans:32.75
 Resource™ fruit beverage:40.0
 Bagel:70.5
 Cocoa Crunch cereal (30 g):58.0
-Low-protein white rice with dried sea algae :70.0
+Low-protein white rice with dried sea algae:70.0
 Appam (thin pancake made from fermented rice flour batter with tender coconut) eaten with Bengal gram curry:90.0
 Waffles:76.0
 Probiotic yoghurt drink:40.0
@@ -1489,18 +1489,18 @@ Green plantain (Musa paradisiaca):39.5
 Jam and peanut butter toast:72.0
 Raisins (Sun Maid:54.0
 Strawberry jam:51.0
-Butter beans :36.0
+Butter beans:36.0
 Maple syrup:54.0
 Baguette:95.0
 Pineapple & Papaya pieces:53.0
-Oat porridge made from roasted and steamed thin (0.5 mm) dehulled oat flakes :80.0
+Oat porridge made from roasted and steamed thin (0.5 mm) dehulled oat flakes:80.0
 Kibbeh saynieh (made with lamb and burghul):61.0
 Sweet and sour chicken with noodles:41.0
 Baked Beans in Sweet Chilli sauce:46.0
 Nutrison Standard® enteral formula (Nutricia N.V.:34.0
 SlimFast® meal replacement powder:35.0
 Oatmeal batch bread:62.0
-Glutinous rice ball with cut glutinous cake  (mochi) :48.0
+Glutinous rice ball with cut glutinous cake  (mochi):48.0
 Green Pea soup:66.0
 Red Raw rice:59.0
 Traditional porridge oats:51.0
@@ -1538,11 +1538,11 @@ Chickpea flour bread:61.0
 25 g Litesse II:7.0
 Soy & Linseed bread (made from packet mix cooked in bread maker):50.0
 Potatoes boiled:49.0
-White rice with fermented soybean (natto) :56.0
+White rice with fermented soybean (natto):56.0
 All-Bran Wheat Flakes™ breakfast cereal:60.0
 Vogel's Honey & Oats bread:55.0
-Potato noodles with meat :17.0
-Kiwi fruit :58.0
+Potato noodles with meat:17.0
+Kiwi fruit:58.0
 Ensure™ bar nutritional support product:43.0
 Cornflakes™ breakfast cereal:78.5
 Inslow™ enteral nutritional supplement (Abbott Nutrition International - Japan):25.0
@@ -1574,12 +1574,12 @@ White rice (Oryza sativa):47.66
 Premium Agave nectar (Sweet Cactus Farms:19.0
 Fruit and cinnamon bread:71.0
 White yam:77.5
-Cashew nuts :25.0
+Cashew nuts:25.0
 Prince Energie+ cookies:73.0
 Wholemeal (whole wheat) bread:71.33
 Reduced-fat yoghurt:30.5
 Chilli beef noodles:42.0
-White spelt wheat bread :65.0
+White spelt wheat bread:65.0
 Doughnut:75.5
 Instant Mashed potato (Idahoan Foods:89.33
 Breakfast Marmalade 100% Fruit Spread:55.0
