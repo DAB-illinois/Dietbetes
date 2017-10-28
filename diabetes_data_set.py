@@ -79,6 +79,7 @@ def main():
 	print(change_to_mean(collection, mean))
 
 main()
+
 # def getData2():
 # 	collection = []
 # 	with open("file1-mto_nejm_puf_cells_20131025.dta", "rb") as f:
