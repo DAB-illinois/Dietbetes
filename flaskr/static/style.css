@@ -1,6 +1,7 @@
 body{
 	padding: 0;
 	margin: 0;
+	font-family: 'Slabo 27px', serif;
 }
 
 h1 {
@@ -9,7 +10,31 @@ h1 {
 	background-position: center;
 	margin: auto;
 	padding: 0;
-	top: 50%;
-    width: 100%;
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    font-size: 72px;
+    color: white;
+}
+
+div {
+	height: 1200px;
+	float: left;
+}
+
+#today{
+	background-color: blue;
+	width: 60%;
+	overflow: hidden;
+}
+
+.div_head{
+	text-align: center;
+	font-size: 30px;
+	letter-spacing: 0.15em;
+}
+
+#log{
+	background-color: green;
+	width: 40%;
 }

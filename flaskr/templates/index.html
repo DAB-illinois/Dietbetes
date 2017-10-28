@@ -3,10 +3,86 @@
 <head>
 	<title>Dietbetes</title>
 	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+	<script src='static/Chart.min.js'></script>
 </head>
 <body>
 	<h1>Dietbetes</h1>
-	<p>{{ title }}</p>
-	<p>{{ author }}</p>
+	<div id="today">
+		<p class="div_head">Today's Data</p>
+		<p>Daily Serving Intake Trends</p>
+		<canvas id="serving_chart" width="600" height="300"></canvas>
+
+		<p>Daily Carbohydrate Intake Trends</p>
+		<canvas id="carb_chart" width="600" height="300"></canvas>
+
+		<p>Daily Glycemic Load (GL) Trends</p>
+		<canvas id="gl_chart" width="600" height="300"></canvas>
+	</div>
+
+	<div id="log">
+		<p class="div_head">Log Today's Meals!</p>
+	</div>
+
+
+	<script>
+   // bar chart data
+   var barData = {
+   labels : [{% for item in labels %}
+                  "{{item}}",
+              {% endfor %}],
+   datasets : [
+      {		fillColor: "rgba(151,187,205,0.2)",
+            strokeColor: "rgba(151,187,205,1)",
+            pointColor: "rgba(151,187,205,1)",
+         data : [{% for item in values %}
+                      {{item}},
+                    {% endfor %}]
+      }
+      ]
+   }
+ 
+   // get bar chart canvas
+   var serving_chart = document.getElementById("serving_chart").getContext("2d");
+   var carb_chart = document.getElementById("carb_chart").getContext("2d");
+   var gl_chart = document.getElementById("gl_chart").getContext("2d");
+ 
+   steps = 10
+   max = 10
+   // draw bar chart
+   new Chart(serving_chart).Bar(barData, {
+       	scaleOverride: true,
+        scaleSteps: steps,
+        scaleStepWidth: Math.ceil(max / steps),
+        scaleStartValue: 0,
+        scaleShowVerticalLines: true,
+        scaleShowGridLines : true,
+        barShowStroke : true,
+        scaleShowLabels: true
+   });
+
+   new Chart(carb_chart).Bar(barData, {
+       	scaleOverride: true,
+        scaleSteps: steps,
+        scaleStepWidth: Math.ceil(max / steps),
+        scaleStartValue: 0,
+        scaleShowVerticalLines: true,
+        scaleShowGridLines : true,
+        barShowStroke : true,
+        scaleShowLabels: true
+   });
+
+   new Chart(gl_chart).Bar(barData, {
+       	scaleOverride: true,
+        scaleSteps: steps,
+        scaleStepWidth: Math.ceil(max / steps),
+        scaleStartValue: 0,
+        scaleShowVerticalLines: true,
+        scaleShowGridLines : true,
+        barShowStroke : true,
+        scaleShowLabels: true
+   });
+ 
+	</script>
 </body>
 </html>

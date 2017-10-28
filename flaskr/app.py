@@ -18,9 +18,12 @@ def retrieve(params, posts):
 
 @app.route('/')
 def my_form():
-	doc = retrieve({"author":"Brandon"}, db.posts)
-	print(doc)
-	return render_template("index.html", title=doc["title"], author=doc["author"])
+	# doc = retrieve({"author":"Brandon"}, db.posts)
+	# print(doc)
+	labels = ["January","February","March","April","May","June","July","August"]
+	values = [10,9,8,7,6,4,7,8]
+	return render_template('index.html', values=values, labels=labels)
+
 
 if __name__ == "__main__":
 	app.run(debug=True)
