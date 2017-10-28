@@ -11,7 +11,7 @@ DATABASE_NAME = "databetes_app"
 TABLE_NAME = "user_data"
 db = client[DATABASE_NAME]
 client_name = ""
-n = ""
+is_new = ""
 
 import fatsecret_api
 
@@ -20,8 +20,9 @@ def add(dic):
 	result = posts.insert_one(dic)
 	print('One post: {0}'.format(result.inserted_id))
 
-def update(dic):
-	pass
+def update(user_id, dic):
+	posts = db[TABLE_NAME]
+	posts.update_one({"name": user_id}, dic)
 
 def retrieve(params, posts):
 	post = posts.find_one(params)
@@ -39,9 +40,9 @@ def login_post():
 	client_name = request.form['name']
 	if db[TABLE_NAME].find({'name': client_name}).count() <= 0:
 		add({'name': client_name, 'gender':None, 'age':None,'race':None,'food_log':{}})
-		n = "no"
+		is_new = True
 	else:
-		n = "yes"
+		is_new = False
 	return redirect(url_for('main'))
 
 @app.route('/main/')
@@ -52,7 +53,10 @@ def main():
 	labels = ["January","February","March","April","May","June","July","August"]
 	values = [10,9,8,7,6,4,7,8]
 	scat_values = {1:6, 2:5, 3:4}
-	return render_template('index.html', new=n, username=client_name, values=values, labels=labels, scatter_values=scat_values)
+	if is_new:
+		return render_template('index.html', new=n, username=client_name, values=values, labels=labels, scatter_values=scat_values)
+	else:
+		return render_template('index.html', visibility="invisible", new=n, username=client_name, values=values, labels=labels, scatter_values=scat_values)
 
 @app.route('/main/', methods=['POST'])
 def my_form_post():
@@ -64,12 +68,13 @@ def my_form_post():
     if gender == "" or age == "" or race == "" or food == "" or serving_size == "":
     	return "Invalid Inputs!"
 
-    current_time = str(datetime.now())
+    #current_time = str(datetime.now())
     queries = fatsecret_api.search_food(food)
     food_names = []
     for food_data in queries:
     	food_names.append(food_data["food_name"])
-    #new_doc = {"name":name, "age":age, "gender":gender, "race":race, "food_log": {current_time: }}
+    new_doc = {"name":name, "age":age, "gender":gender, "race":race, "food_log": {}}
+
     labels = ["January","February","March","April","May","June","July","August"]
     values = [10,9,8,7,6,4,7,8]
     scat_values = {1:6, 2:5, 3:4}

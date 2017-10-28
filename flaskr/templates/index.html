@@ -35,12 +35,12 @@
     <div class="outer" id="log">
         <p class="div_head">Log Today's Meals!</p>
         <form action="." method="POST">
-	        <div><p>Your sex:</p>
+	        <div class="{{ visibility }}"><p>Your sex:</p>
 	        	<input type="radio" name="gender" value="male"> Male
   				<input type="radio" name="gender" value="female"> Female
   			</div>
-	        <div><p>Your age: </p><input type="number" name="age"></div>
-	        <div><p>Your race:</p>
+	        <div class="{{ visibility }}""><p>Your age: </p><input type="number" name="age"></div>
+	        <div class="{{ visibility }}"><p>Your race:</p>
 	        	<input type="radio" name="race" value="african_american"> African American
 	        	<input type="radio" name="race" value="asian"> Asian
 	        	<input type="radio" name="race" value="caucasian"> Caucasian

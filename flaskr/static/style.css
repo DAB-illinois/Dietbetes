@@ -60,7 +60,6 @@ h1 {
 }
 
 #log{
-	background-color: green;
 	width: 35%;
 }
 
@@ -97,4 +96,8 @@ input[type="submit"] {
 
 input:focus {
 	border-color: #119311
+}
+
+.invisible {
+    display: none;
 }
