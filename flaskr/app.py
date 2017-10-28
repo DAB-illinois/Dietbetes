@@ -34,10 +34,11 @@ def login():
 def login_post():
 	global client_name, n
 	client_name = request.form['name']
-	if db[TABLE_NAME].find({'name': client_name}).count() > 0:
-		n = "yes"
-	else:
+	if db[TABLE_NAME].find({'name': client_name}).count() <= 0:
+		add({'name': client_name, 'gender':None, 'age':None,'race':None,'food_log':{}})
 		n = "no"
+	else:
+		n = "yes"
 	return redirect(url_for('main'))
 
 @app.route('/main/')
