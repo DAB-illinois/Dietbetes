@@ -151,8 +151,8 @@
 	            showLine: false,
 	            borderColor: mainGraphColorOpaque,
 	            data: [{% for item in scatter_values %} {
-	                    x: {{ item }},
-	                    y: {{ scatter_values }}[{{ item }}]
+	                    x: {{ item[0] }},
+	                    y: {{ item[1] }}
 	                },
 	                {% endfor %}
 	            ]
