@@ -1,45 +1,46 @@
 import csv
 import math
 
-def get_diabetic_data():
-	current_line = []
+from random import randint
 
-	with open('diabetic_data.csv', 'r') as csvfile:
-		for line in csvfile:
-			temp = line.split(",")
-			for x in temp:
-				current_line.append(x)
-	
-	count = 0
-	iterator = 0
-	i = 2
-	j = 3
-	k = 4
-	z = 23
-	impt_attributes = []
+current_line = []
 
-	for x in range(0, len(current_line)):
-		if x == i + impt_att_calc(count) or x == j + impt_att_calc(count) or x == k + impt_att_calc(count) or x == z + impt_att_calc(count):
-			impt_attributes.append(current_line[x])
-			iterator += 0.25
+with open('diabetic_data.csv', 'r') as csvfile:
+	for line in csvfile:
+		temp = line.split(",")
+		for x in temp:
+			current_line.append(x)
 
-			if iterator == 1.0:
-				count += (int)(iterator)
-				iterator = 0
+count = 0
+iterator = 0
+i = 2
+j = 3
+k = 4
+z = 23
+impt_attributes = []
 
-	sorted_Att = []
-	temp = []
-	for x in range(0,len(impt_attributes) - 1):
-		temp.append(impt_attributes[x])
-		if (x + 1) % 4 == 0:
-			sorted_Att.append(temp)
-			temp = []
+for x in range(0, len(current_line)):
+	if x == i + (50 * count) or x == j + (50 * count) or x == k + (50 * count) or x == z + (50 * count):
+		impt_attributes.append(current_line[x])
+		iterator += 0.25
 
-	return(sorted_Att)
+		if iterator == 1.0:
+			count += (int)(iterator)
+			iterator = 0
 
-def get_mean(sorted_Att):
+sorted_Att = []
+temp = []
+for x in range(0,len(impt_attributes) - 1):
+	temp.append(impt_attributes[x])
+	if (x + 1) % 4 == 0:
+		sorted_Att.append(temp)
+		temp = []
+
+diabetic_data = sorted_Att
+
+def get_mean():
 	collection = []
-	for x in sorted_Att:
+	for x in diabetic_data:
 		if "None" not in x and "Norm" not in x:
 			collection.append(x[2])
 	
@@ -52,33 +53,72 @@ def get_mean(sorted_Att):
 
 	return math.ceil(mean)
 
-def change_to_mean(sorted_Att, mean):
+def change_to_mean():
+	mean = get_mean()
+	global diabetic_data
 
-	for x in sorted_Att:
+	for x in diabetic_data:
 		if "None" in x or "Norm" in x:
 			x[3] = ">" + (str)(mean)
-
-	return sorted_Att
 
 def impt_att_calc(count):
 	return (50 * count)
 
 def get_none():
-	collection = get_diabetic_data()
-
 	count = 0
-	for x in collection:
+	for x in diabetic_data:
 		if "None" in x:
 			count+=1
 
 	print(count)
 
-def main():
-	collection = get_diabetic_data()
-	mean = get_mean(collection)
-	print(change_to_mean(collection, mean))
+def get_race():
+	race = []
 
-main()
+	for x in diabetic_data:
+		if x[0] not in race:
+			race.append(x[0])
+	
+	return race
+
+def get_sex():
+	sex = []
+
+	for x in diabetic_data:
+		if x[1] not in sex:
+			sex.append(x[1])
+
+	return sex
+
+def get_age(race, sex):
+	age = []
+
+	for x in diabetic_data:
+		if x[0] == race and x[1] == sex:
+			age_range = x[2].split("-")
+			lower_age = (int)(age_range[0][1:])
+			upper_age = (int)(age_range[1][:-1])
+			age.append(randint(lower_age, upper_age))
+
+	return age
+
+def get_a1c(race, sex):
+	collection = diabetic_data
+	a1c = []
+
+	for x in collection:
+		if x[0] == race or x[1] == sex:
+			current_a1c = (int)(x[3][1:])
+			a1c.append(current_a1c)
+
+	return a1c
+
+def main():
+	collection = diabetic_data
+	mean = get_mean()
+	#print(change_to_mean())
+change_to_mean()
+# main()
 
 # def getData2():
 # 	collection = []
