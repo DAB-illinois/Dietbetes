@@ -86,8 +86,8 @@ def my_form_post():
 @app.route('/choose_food/')
 def choose_food_post():
 	labels = ["January","February","March","April","May","June","July","August"]
-    values = [10,9,8,7,6,4,7,8]
-    scat_values = {1:6, 2:5, 3:4}
+	values = [10,9,8,7,6,4,7,8]
+	scat_values = {1:6, 2:5, 3:4}
 	return render_template('choose_food.html', results=food_names, username=client_name, values=values, labels=labels, scatter_values=scat_values)
 
 
