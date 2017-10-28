@@ -17,7 +17,7 @@ h1 {
     color: white;
 }
 
-h1::hover{
+h1:hover{
     color:blue;
 }
 
@@ -60,7 +60,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    font-size: 100px;
+    color: blue;
 }
 
 a{
@@ -78,21 +78,4 @@ a{
     font-size: 20px;
     font-family: verdana;
     letter-spacing: 4px;
-}
-
-.sixth {
-  border-radius: 3em;
-  border-color: $green;
-  color: $green;
-  background: {
-      image: linear-gradient(to bottom, transparent 50%, $green 50%);
-      position: 0% 0%;
-      size: 210%;
-  }
-  transition: background 150ms ease-in-out, color 150ms ease-in-out;
-  
-  &:hover {
-    color: #fff;
-    background-position: 0 100%;
-  }
 }
