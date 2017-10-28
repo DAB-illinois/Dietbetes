@@ -48,6 +48,7 @@ def new_user():
 
 @app.route('/new/', methods=['POST'])
 def new_user_input():
+	global client_name
     gender = request.form['gender']
     age = request.form['age']
     race = request.form['race']
