@@ -20,6 +20,9 @@ def add(dic):
 	result = posts.insert_one(dic)
 	print('One post: {0}'.format(result.inserted_id))
 
+def update(dic):
+	pass
+
 def retrieve(params, posts):
 	post = posts.find_one(params)
 	return post
@@ -53,7 +56,6 @@ def main():
 
 @app.route('/main/', methods=['POST'])
 def my_form_post():
-    name = request.form['name']
     gender = request.form['gender']
     age = request.form['age']
     race = request.form['race']
@@ -64,14 +66,13 @@ def my_form_post():
 
     current_time = str(datetime.now())
     queries = fatsecret.search_food(food)
-    if db[TABLE_NAME].find({'name': name}).count() > 0:
-    	pass
-    else:
-    	queries = fatsecret.search_food(food)
-	    #new_doc = {"name":name, "age":age, "gender":gender, "race":race, "food_log": {current_time: }}
+    food_names = []
+    for food_data in queries:
+    	food_names.append(food_data["food_name"])
+    #new_doc = {"name":name, "age":age, "gender":gender, "race":race, "food_log": {current_time: }}
 
     add()
-    return gender + age + race + food + serving_size
+    return render_template('index_choose_food.html', options=food_names, new=n, username=client_name, values=values, labels=labels, scatter_values=scat_values)
 
 if __name__ == "__main__":
 	app.run(debug=True)
