@@ -21,7 +21,7 @@ def my_form():
 	# doc = retrieve({"author":"Brandon"}, db.posts)
 	# print(doc)
 	title = ""
-	with open("./templates/index.html","r") as f:
+	with open("/var/www/html/flaskapp/templates/index.html","r") as f:
 		title = str(f.readlines())
 	return render_template("index.html", title=title)
 
