@@ -54,9 +54,9 @@ def main():
 	values = [10,9,8,7,6,4,7,8]
 	scat_values = {1:6, 2:5, 3:4}
 	if is_new:
-		return render_template('index.html', new=n, username=client_name, values=values, labels=labels, scatter_values=scat_values)
+		return render_template('index.html', username=client_name, values=values, labels=labels, scatter_values=scat_values)
 	else:
-		return render_template('index.html', visibility="invisible", new=n, username=client_name, values=values, labels=labels, scatter_values=scat_values)
+		return render_template('index.html', visibility="invisible", username=client_name, values=values, labels=labels, scatter_values=scat_values)
 
 @app.route('/main/', methods=['POST'])
 def my_form_post():
