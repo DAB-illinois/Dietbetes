@@ -20,7 +20,7 @@ def find_closest_centers():
     closer_centers = []
     current_closer_center = []
 
-    for x in db:
+    for x in centers.find():
         lat_lon = convert_to_lat_lon(x["address"])
 
         if get_distance(lat, lon, lat_lon[0], lat_lon[1]) < 8.04672:
