@@ -103,7 +103,7 @@ def choose_food_post():
 		if food_name == food_data["food_name"]:
 			data = food_data
 
-	return data
+	return str(data)
 
 
 if __name__ == "__main__":
