@@ -51,4 +51,4 @@ for i, j in gi_data.items():
 	l = len(j)
 	s = sum(j)
 	avg = int((s/l)*100)/100;
-	add_to_db({i, str(avg)})
+	add_to_db({i: str(avg)})
