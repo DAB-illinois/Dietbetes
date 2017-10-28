@@ -62,6 +62,10 @@ def new_user_input():
 @app.route('/main/')
 def main():
 	global client_name, carb_labels, carb_values, serv_values, serv_labels, scat_values
+
+	if client_name == "":
+		redirect(url_for('login'))
+
 	history = retrieve(client_name, db[TABLE_NAME])
 	carb_hist = history['carb_log']
 	carb_labels = []
@@ -97,6 +101,9 @@ def main():
 
 @app.route('/main/', methods=['POST'])
 def my_form_post():
+	if client_name == "":
+		redirect(url_for('login'))
+
     global queries
     food = request.form['food']
     if food == "":
@@ -109,6 +116,9 @@ def my_form_post():
 
 @app.route('/choose_food/')
 def choose_food():
+	if client_name == "":
+		redirect(url_for('login'))
+
 	global client_name, carb_labels, carb_values, serv_values, serv_labels, queries, scat_values
 
 	food_names = []
@@ -119,6 +129,9 @@ def choose_food():
 
 @app.route('/choose_food/', methods=['POST'])
 def choose_food_post():
+	if client_name == "":
+		redirect(url_for('login'))
+		
 	global client_name, queries
 	food_name = request.form['type_food']
 	serving_size = request.form['serving_size']
