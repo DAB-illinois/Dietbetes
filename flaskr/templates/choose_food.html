@@ -35,6 +35,7 @@
     <div class="outer" id="log">
         <p class="div_head">Pick the correct food</p>
         <form action="." method="POST">
+        	<div><p>Approximate serving size: </p><input type="number" name="serving_size"></div>
         	<div>
 	        	{% for option in results %}
 			        <div width="100%"><input type="radio" name="type_food" value="{{ option }}"> {{ option }}</div>

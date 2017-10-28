@@ -87,7 +87,6 @@ def main():
 def my_form_post():
     global queries
     food = request.form['food']
-    serving_size = request.form['serving_size']
     if food == "" or serving_size == "":
     	return "Invalid Inputs!"
 
@@ -113,13 +112,17 @@ def choose_food():
 def choose_food_post():
 	global client_name, queries
 	food_name = request.form['type_food']
+	serving_size = request.form['serving_size']
 	data = {}
 	for food_data in queries:
 		if food_name == food_data["food_name"]:
 			data = food_data
 
 	url = data['food_url']
-	return str(url)
+	carbs_per_serv = float(fatsecret_crawl.get_carb_per_serving(url))
+	total_carbs = int(float(serving_size) * carbs_per_serv *100)/100
+	current_time = str(datetime.now())
+	return str(total_carbs)
 
 if __name__ == "__main__":
 	app.run(debug=True)
