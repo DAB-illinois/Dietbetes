@@ -14,6 +14,7 @@ db = client[DATABASE_NAME]
 client_name = ""
 
 import fatsecret_api
+import fatsecret_crawl
 
 def add(dic):
 	posts = db[TABLE_NAME]
@@ -117,7 +118,8 @@ def choose_food_post():
 		if food_name == food_data["food_name"]:
 			data = food_data
 
-	return str(data)
+	url = data['food_url']
+	return str(url)
 
 if __name__ == "__main__":
 	app.run(debug=True)
