@@ -10,6 +10,7 @@ input[type=submit] {
     border-right-style: none;
     border-left-style: none;
 	font-family: 'Slabo 27px', serif;
+    color: #000000;
 }
 
 @keyframes fade-in {
