@@ -25,8 +25,8 @@ def update(user_id, dic):
 	posts = db[TABLE_NAME]
 	posts.update_many({"name": user_id}, {"$set": dic})
 
-def retrieve(params, posts):
-	post = posts.find_one(params)
+def retrieve(user_id, posts):
+	post = posts.find_one({"name": user_id})
 	return post
 
 @app.route('/')
@@ -56,7 +56,7 @@ def new_user_input():
     race = request.form['race']
     if gender == "" or age == "" or race == "":
     	return "Invalid params"
-    new_doc = {"name":client_name, "age":age, "gender":gender, "race":race}
+    new_doc = {"name":client_name, "age":age, "gender":gender, "race":race, "carb_log":{}, "serv_log":{}}
     add(new_doc)
     return redirect(url_for('main'))
 
@@ -124,7 +124,15 @@ def choose_food_post():
 	carbs_per_serv = float(fatsecret_crawl.get_carb_per_serving(url))
 	total_carbs = int(float(serving_size) * carbs_per_serv *100)/100
 	current_time = str(datetime.now())
-	return str(total_carbs)
+	old = retrieve(client_name, db[TABLE_NAME])
+	old_carbs = old['carb_log']
+	old_serv = old['serv_log']
+	old_carbs[current_time] = total_carbs
+	old_serv[client_name] = serving_size
+
+	update(client_name, {"carb_log":old_carbs, "serv_log":old_serv})
+	
+	return redirect(url_for('main'))
 
 if __name__ == "__main__":
 	app.run(debug=True)
