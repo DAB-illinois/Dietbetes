@@ -11,7 +11,7 @@ client = MongoClient()
 client = MongoClient('localhost', 27017)
 DATABASE_NAME = "databetes_app"
 
-db = client[TEST_DATABASE_NAME]
+db = client[DATABASE_NAME]
 
 def add_to_db(dic):
 	table = db.gi_indexes
