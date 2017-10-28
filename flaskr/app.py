@@ -62,10 +62,9 @@ def new_user_input():
 @app.route('/main/')
 def main():
 	global client_name
-	# doc = retrieve({"author":"Brandon"}, db.posts)
-	# print(doc)
-	labels = ["January","February","March","April","May","June","July","August"]
-	values = [10,9,8,7,6,4,7,8]
+	history = retrieve(client_name, db[TABLE_NAME])
+	carb_hist = history['carb_log']
+	serv_hist = history['serv_log']
 
 	self_data = retrieve(client_name, db[TABLE_NAME])
 	self_race = self_data['race']
@@ -80,7 +79,7 @@ def main():
 			continue
 		scat_values.append([a1c[i], age[i]])
 
-	return render_template('index.html', username=client_name, values=values, labels=labels, scatter_values=scat_values)
+	return render_template('index.html', username=client_name, serv_hist=serv_hist, carb_hist=carb_hist, scatter_values=scat_values)
 
 @app.route('/main/', methods=['POST'])
 def my_form_post():
