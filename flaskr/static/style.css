@@ -4,21 +4,33 @@ body{
 	font-family: 'Slabo 27px', serif;
 }
 
-h1 {
-	line-height: 50vh;
+#top {
+	height: 50%;
+	width: 100%;
 	background: url(../static/back.jpg);
 	background-position: center;
+	color: white;
+}
+
+#top p {
+	margin: 0;
+	padding: 1%;
+	right: 0;
+	font-size: 32px;
+}
+
+h1 {
+	line-height: 50vh;
 	margin: auto;
 	padding: 0;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.5em;
     font-size: 72px;
-    color: white;
 }
 
 .outer {
-	height: 1200px;
+	height: 800px;
 	float: left;
 }
 
@@ -29,7 +41,7 @@ h1 {
 
 #today .chart {
 	width: 40%;
-    height: 20%;
+    height: 30%;
     margin: 0 auto;
     padding: 5%;
     position: relative;
@@ -64,6 +76,8 @@ form p {
 }
 
 input {
+	background-color: #2fc62f;
+    color: white;
     padding: 1%;
     margin: 5%;
 }
@@ -79,4 +93,8 @@ input[type="text"] {
 
 input[type="submit"] {
 	width: 20%;
+}
+
+input:focus {
+	border-color: #119311
 }

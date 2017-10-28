@@ -1,0 +1,2 @@
+KEY = "afa23ef379ca4a7fab7b708bf779cef7"
+SHARED_SECRET = "bf4327e8a8dd49ab82faa3e185ede271"
