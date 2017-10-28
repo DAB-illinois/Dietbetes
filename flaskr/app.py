@@ -9,6 +9,7 @@ client = MongoClient()
 client = MongoClient('localhost', 27017)
 DATABASE_NAME = "databetes_app"
 TABLE_NAME = "user_data"
+DIABETES_SET_TABLE = "diabetes_data_set"
 db = client[DATABASE_NAME]
 client_name = ""
 
@@ -65,7 +66,18 @@ def main():
 	# print(doc)
 	labels = ["January","February","March","April","May","June","July","August"]
 	values = [10,9,8,7,6,4,7,8]
-	scat_values = {1:6, 2:5, 3:4}
+
+	self_data = retrieve({"name":client_name}, db[TABLE_NAME])
+	self_race = self_data['race']
+	self_gender = self_data['gender']
+	diabetes_db_data = retrieve({"race/gender":self_race.lower()+","+self_gender.lower()})
+	diabetes_graph = diabetes_db_data['graph']
+	a1c = diabetes_graph['a1c']
+	age = diabetes_graph['age']
+	scat_values = {}
+	for i in range(len(a1c)):
+		scat_values[a1c[i]] = age[i]
+
 	return render_template('index.html', username=client_name, values=values, labels=labels, scatter_values=scat_values)
 
 @app.route('/main/', methods=['POST'])
