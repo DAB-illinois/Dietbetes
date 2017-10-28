@@ -127,7 +127,7 @@ def choose_food_post():
 	old_carbs = old['carb_log']
 	old_serv = old['serv_log']
 	old_carbs[current_time] = total_carbs
-	old_serv[client_name] = serving_size
+	old_serv[current_time] = serving_size
 
 	update(client_name, {"carb_log":old_carbs, "serv_log":old_serv})
 	
