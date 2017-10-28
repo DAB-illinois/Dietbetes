@@ -22,7 +22,8 @@ def my_form():
 	# print(doc)
 	labels = ["January","February","March","April","May","June","July","August"]
 	values = [10,9,8,7,6,4,7,8]
-	return render_template('index.html', values=values, labels=labels)
+	scat_values = {1:6, 2:5, 3:4}
+	return render_template('index.html', values=values, labels=labels, scatter_values=scat_values)
 
 
 if __name__ == "__main__":
