@@ -66,3 +66,48 @@ input[type="submit"] {
   --color: #ffa260;
   --hover: #e5ff60;
 }
+
+.btn {
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid $red;
+  border-radius: 0.6em;
+  color: $red;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    outline: 0;
+  }
+}
+
+.sixth {
+  border-radius: 3em;
+  border-color: $green;
+  color: $green;
+  background: {
+      image: linear-gradient(to bottom, transparent 50%, $green 50%);
+      position: 0% 0%;
+      size: 210%;
+  }
+  transition: background 150ms ease-in-out, color 150ms ease-in-out;
+  
+  &:hover {
+    color: #fff;
+    background-position: 0 100%;
+  }
+}
