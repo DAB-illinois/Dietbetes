@@ -29,7 +29,7 @@ def get_start_end_index(html, index_to_get):
 
 gi_data = {}
 
-for i in range(274, MAX_INDEX):
+for i in range(1, MAX_INDEX):
 	print(i)
 	url = base_url + str(i)
 
