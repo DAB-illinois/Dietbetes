@@ -1,15 +1,68 @@
 import requests
 import json
 
+from pymongo import MongoClient
+client = MongoClient()
+client = MongoClient('localhost', 27017)
+DATABASE_NAME = "databetes_app"
+TABLE_NAME = "health_centers"
+db = client[DATABASE_NAME]
+
 send_url = 'http://freegeoip.net/json'
 r = requests.get(send_url)
 j = json.loads(r.text)
 lat = j['latitude']
 lon = j['longitude']
 
-print(str(lat) + ", " + str(lon))
 
+def find_closest_centers():
+    centers = db[TABLE_NAME]
+    closer_centers = []
+    current_closer_center = []
 
+    for x in db:
+        lat_lon = convert_to_lat_lon(x["address"])
+
+        if get_distance(lat, lon, lat_lon[0], lat_lon[1]) < 8.04672:
+            current_closer_center.append(x["name"])
+            current_closer_center.append(lat_lon)
+            current_closer_center.append(x["telephone"])
+
+            closer_centers.append(current_closer_center)
+            current_closer_center = []
+
+    return closer_centers
+
+from geopy.geocoders import Nominatim
+def convert_to_lat_lon(address):
+    lat_lon = []
+    geolocator = Nominatim()
+    location = geolocator.geocode(address)
+
+    lat_lon.append(location.latitude)
+    lat_lon.append(location.longitude)
+
+    return lat_lon
+
+from math import sin, cos, sqrt, atan2, radians
+# approximate radius of earth in km
+def get_distance(lat_user, lon_user, lat_center, lon_center):
+    R = 6373.0
+
+    lat1 = radians(lat_user)
+    lon1 = radians(lon_user)
+    lat2 = radians(lat_center)
+    lon2 = radians(lon_center)
+
+    dlon = lon2 - lon1
+    dlat = lat2 - lat1
+
+    a = sin(dlat / 2)**2 + cos(lat1) * cos(lat2) * sin(dlon / 2)**2
+    c = 2 * atan2(sqrt(a), sqrt(1 - a))
+
+    distance = R * c
+
+    return distance
 
 	# HTML and Javascript version of the nearest location finder
 
