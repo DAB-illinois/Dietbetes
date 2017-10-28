@@ -24,7 +24,7 @@
             <canvas id="carb_chart"></canvas>
         </div>
         <div class="chart">
-            <p>You Relative to Diabetic Patients</p>
+            <p>Diabetic Patients within your Race and Gender</p>
             <canvas id="compare_chart"></canvas>
         </div>
     </div>
@@ -132,12 +132,20 @@
 	            yAxes: [{
 	                ticks: {
 	                    beginAtZero:true,
-	                }
+	                }, 
+	                scaleLabel: {
+				        display: true,
+				        labelString: 'Age'
+				    }
 	            }],
 	            xAxes: [{
 	                ticks: {
 	                    beginAtZero:true,
-	                }
+	                }, 
+	                scaleLabel: {
+				        display: true,
+				        labelString: 'A1C Level'
+				    }
 	            }]
 	        }
         }
