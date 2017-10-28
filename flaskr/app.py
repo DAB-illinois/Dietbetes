@@ -4,4 +4,7 @@ app.config.from_object(__name__) # load config from this file , flaskr.py
 
 @app.route('/')
 def my_form():
-	return render_template("layout.html")
+	return render_template("index.html")
+
+if __name__ == "__main__":
+	app.run(debug=True)

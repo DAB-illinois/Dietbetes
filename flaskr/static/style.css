@@ -1,4 +1,15 @@
+body{
+	padding: 0;
+	margin: 0;
+}
+
 h1 {
-	height: 50vh;
+	line-height: 50vh;
 	background: url(../static/back.jpg);
+	background-position: center;
+	margin: auto;
+	padding: 0;
+	top: 50%;
+    width: 100%;
+    text-align: center;
 }
