@@ -21,7 +21,7 @@ def add(dic):
 
 def update(user_id, dic):
 	posts = db[TABLE_NAME]
-	posts.update_one({"name": user_id}, dic)
+	posts.update_many({"name": user_id}, {"$set": dic})
 
 def retrieve(params, posts):
 	post = posts.find_one(params)
@@ -38,7 +38,6 @@ def login_post():
 	global client_name
 	client_name = request.form['name']
 	if db[TABLE_NAME].find({'name': client_name}).count() <= 0:
-		add({'name': client_name, 'gender':None, 'age':None,'race':None,'food_log':{}})
 		return redirect(url_for('new_user'))
 	else:
 		return redirect(url_for('main'))
@@ -52,8 +51,10 @@ def new_user_input():
     gender = request.form['gender']
     age = request.form['age']
     race = request.form['race']
-    new_doc = {"age":age, "gender":gender, "race":race}
-    update(client_name, new_doc)
+    if gender == "" or age == "" or race == "":
+    	return "Invalid params"
+    new_doc = {"name":client_name, "age":age, "gender":gender, "race":race}
+    add(new_doc)
     return redirect(url_for('main'))
 
 @app.route('/main/')
