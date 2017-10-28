@@ -49,15 +49,15 @@ def new_user():
 
 @app.route('/new/', methods=['POST'])
 def new_user_input():
-    global client_name
-    gender = request.form['gender']
-    age = request.form['age']
-    race = request.form['race']
-    if gender == "" or age == "" or race == "":
-    	return "Invalid params"
-    new_doc = {"name":client_name, "age":age, "gender":gender, "race":race, "carb_log":{}, "serv_log":{}}
-    add(new_doc)
-    return redirect(url_for('main'))
+	global client_name
+	gender = request.form['gender']
+	age = request.form['age']
+	race = request.form['race']
+	if gender == "" or age == "" or race == "":
+		return "Invalid params"
+	new_doc = {"name":client_name, "age":age, "gender":gender, "race":race, "carb_log":{}, "serv_log":{}}
+	add(new_doc)
+	return redirect(url_for('main'))
 
 @app.route('/main/')
 def main():
@@ -104,15 +104,14 @@ def my_form_post():
 	if client_name == "":
 		redirect(url_for('login'))
 
-    global queries
-    food = request.form['food']
-    if food == "":
-    	return "Invalid Inputs!"
+	global queries
+	food = request.form['food']
+	if food == "":
+		return "Invalid Inputs!"
 
-    #current_time = str(datetime.now())
-    queries = fatsecret_api.search_food(food)
+	queries = fatsecret_api.search_food(food)
 
-    return redirect(url_for('choose_food'))
+	return redirect(url_for('choose_food'))
 
 @app.route('/choose_food/')
 def choose_food():
@@ -131,7 +130,7 @@ def choose_food():
 def choose_food_post():
 	if client_name == "":
 		redirect(url_for('login'))
-		
+
 	global client_name, queries
 	food_name = request.form['type_food']
 	serving_size = request.form['serving_size']
