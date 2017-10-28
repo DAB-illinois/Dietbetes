@@ -106,7 +106,7 @@ def get_a1c(race, sex):
 	a1c = []
 
 	for x in diabetic_data:
-		if x[0] == race or x[1] == sex:
+		if x[0] == race and x[1] == sex:
 			current_a1c = (int)(x[3][1:])
 			a1c.append(current_a1c)
 
