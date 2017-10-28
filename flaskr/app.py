@@ -76,6 +76,8 @@ def main():
 	age = diabetes_graph['age']
 	scat_values = []
 	for i in range(len(a1c)):
+		if age[i] == 0:
+			continue
 		scat_values.append([a1c[i], age[i]])
 
 	return render_template('index.html', username=client_name, values=values, labels=labels, scatter_values=scat_values)
@@ -116,7 +118,6 @@ def choose_food_post():
 			data = food_data
 
 	return str(data)
-
 
 if __name__ == "__main__":
 	app.run(debug=True)
