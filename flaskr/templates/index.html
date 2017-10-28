@@ -53,14 +53,14 @@
     new Chart(serving_chart, {
         type: 'bar',
         data: {
-	        labels: [{% for item in serv_hist %}
+	        labels: [{% for item in serv_labels %}
 	            "{{item}}", {% endfor %}
 	        ],
 	        datasets: [{
 	            backgroundColor: mainGraphColorTransparent,
 	            borderColor: mainGraphColorOpaque,
 	            borderWidth: barChartBorderWidth,
-	            data: [{% for item in serv_hist %} {{ serv_hist[item] }},
+	            data: [{% for item in serv_values %} {{ item }},
 	                {% endfor %}
 	            ]
 	        }]
@@ -82,14 +82,14 @@
     new Chart(carb_chart, {
         type: 'bar',
         data: {
-	        labels: [{% for item in carb_hist %}
+	        labels: [{% for item in carb_labels %}
 	            "{{item}}", {% endfor %}
 	        ],
 	        datasets: [{
 	            backgroundColor: mainGraphColorTransparent,
 	            borderColor: mainGraphColorOpaque,
 	            borderWidth: barChartBorderWidth,
-	            data: [{% for item in carb_hist %} {{ carb_hist[item] }},
+	            data: [{% for item in carb_values %} {{ item }},
 	                {% endfor %}
 	            ]
 	        }]

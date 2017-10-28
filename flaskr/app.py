@@ -64,7 +64,19 @@ def main():
 	global client_name
 	history = retrieve(client_name, db[TABLE_NAME])
 	carb_hist = history['carb_log']
+	carb_labels = []
+	carb_values = []
+	for i in carb_hist:
+		carb_labels.append(i)
+	for i in carb_labels:
+		carb_values.append(carb_hist[i])
 	serv_hist = history['serv_log']
+	serv_labels = []
+	serv_values = []
+	for i in serv_hist:
+		serv_labels.append(i)
+	for i in serv_labels:
+		serv_values.append(serv_hist[i])
 
 	self_data = retrieve(client_name, db[TABLE_NAME])
 	self_race = self_data['race']
@@ -79,7 +91,7 @@ def main():
 			continue
 		scat_values.append([a1c[i], age[i]])
 
-	return render_template('index.html', username=client_name, serv_hist=serv_hist, carb_hist=carb_hist, scatter_values=scat_values)
+	return render_template('index.html', username=client_name, scatter_values=scat_values, carb_labels=carb_labels, carb_values=carb_values, serv_labels=serv_labels, serv_values=serv_values)
 
 @app.route('/main/', methods=['POST'])
 def my_form_post():
