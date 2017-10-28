@@ -70,7 +70,7 @@ def main():
 	self_data = retrieve({"name":client_name}, db[TABLE_NAME])
 	self_race = self_data['race']
 	self_gender = self_data['gender']
-	diabetes_db_data = db[TABLE_NAME].find_one({"race/gender":self_race.lower()+","+self_gender.lower()})
+	diabetes_db_data = db[DIABETES_SET_TABLE].find_one({"race/gender":self_race.lower()+","+self_gender.lower()})
 	diabetes_graph = diabetes_db_data['graph']
 	a1c = diabetes_graph['a1c']
 	age = diabetes_graph['age']
