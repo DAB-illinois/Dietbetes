@@ -1,8 +1,8 @@
 encounter_id,
 patient_nbr,
-race,
-gender,
-age,
+	race, 
+	gender,
+	age,
 weight,
 admission_type_id,
 discharge_disposition_id,
@@ -21,9 +21,11 @@ diag_2,
 diag_3,
 number_diagnoses,
 max_glu_serum,
-A1Cresult,
-metformin,
-repaglinide,
+	A1Cresult,
+
+-MEDICATION
+metformin,	#treats type 2 diabetes
+repaglinide,	#treats type 2 diabetes
 nateglinide,
 chlorpropamide,
 glimepiride,
@@ -45,6 +47,7 @@ glipizide-metformin,
 glimepiride-pioglitazone,
 metformin-rosiglitazone,
 metformin-pioglitazone,
+
 change,
 diabetesMed,
 readmitted
