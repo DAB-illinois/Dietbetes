@@ -68,6 +68,8 @@ for i in range(1, MAX + 1):
 					data[state].append({"name": name, "address": address, "telephone": tele})
 				else:
 					data[state] = [{"name": name, "address": address, "telephone": tele}]
+				break
+	break
 
 for i, j in data.items():
 	add({i:j})
