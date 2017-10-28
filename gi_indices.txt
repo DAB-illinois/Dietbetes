@@ -980,9 +980,9 @@ Just Right Just Grains™ breakfast cereal:62.0
 Pasta bake:23.0
 Fruit punch beverage:67.0
 Apricot 100% Pure Fruit spread:43.0
-Mars Bar® (M&M/Mars:68.0
+Mars Bar® (M&M/Mars):68.0
 Cornmeal + margarine:69.0
-Amaranth wheat (25:75) flour flatbread:66.0
+Amaranth wheat (25/75) flour flatbread:66.0
 Cocoavia™ Chocolate Covered Almonds:21.0
 Instant oat porridge:82.0
 Black beans:30.0
