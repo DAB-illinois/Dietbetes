@@ -24,7 +24,8 @@ def draw():
 			race_x_y["a1c"] = a1c
 			current_race["" + x + "," + i] = race_x_y
 		
-			db[TABLE_NAME].insert_one(current_race)
+			db_data = {"race/gender":"" + x + "," + i, "graph":race_x_y}
+			db[TABLE_NAME].insert_one(db_data)
 			race_graphs.append(current_race)
 			current_race = {}
 			race_x_y = {}
