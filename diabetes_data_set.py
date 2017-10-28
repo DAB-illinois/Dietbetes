@@ -1,4 +1,5 @@
 import csv
+import math
 
 def get_diabetic_data():
 	current_line = []
@@ -15,9 +16,9 @@ def get_diabetic_data():
 	j = 3
 	k = 4
 	z = 23
-	imptAttributes = []
+	impt_attributes = []
 
-	for x in range(0, len(currentLine)):
+	for x in range(0, len(current_line)):
 		if x == i + impt_att_calc(count) or x == j + impt_att_calc(count) or x == k + impt_att_calc(count) or x == z + impt_att_calc(count):
 			impt_attributes.append(current_line[x])
 			iterator += 0.25
@@ -38,21 +39,26 @@ def get_diabetic_data():
 
 def get_mean(sorted_Att):
 	collection = []
-	for x in sorted_Att):
+	for x in sorted_Att:
 		if "None" not in x and "Norm" not in x:
 			collection.append(x[2])
 	
 	numbers = []
 	for x in collection:
-		numbers.append(x[1])
+		numbers.append((int)(x[1]))
 
 	computed_sum = sum(numbers)
 	mean = sum(numbers) / len(numbers)
 
-	return (int)(mean)
+	return math.ceil(mean)
 
-def change_to_mean(mean):
-	
+def change_to_mean(sorted_Att, mean):
+
+	for x in sorted_Att:
+		if "None" in x or "Norm" in x:
+			x[3] = ">" + (str)(mean)
+
+	return sorted_Att
 
 def impt_att_calc(count):
 	return (50 * count)
@@ -67,7 +73,12 @@ def get_none():
 
 	print(count)
 
+def main():
+	collection = get_diabetic_data()
+	mean = get_mean(collection)
+	print(change_to_mean(collection, mean))
 
+main()
 # def getData2():
 # 	collection = []
 # 	with open("file1-mto_nejm_puf_cells_20131025.dta", "rb") as f:
