@@ -87,7 +87,7 @@ def main():
 def my_form_post():
     global queries
     food = request.form['food']
-    if food == "" or serving_size == "":
+    if food == "":
     	return "Invalid Inputs!"
 
     #current_time = str(datetime.now())
@@ -113,6 +113,8 @@ def choose_food_post():
 	global client_name, queries
 	food_name = request.form['type_food']
 	serving_size = request.form['serving_size']
+	if serving_size == "":
+		return "Invalid Inputs!"
 	data = {}
 	for food_data in queries:
 		if food_name == food_data["food_name"]:
