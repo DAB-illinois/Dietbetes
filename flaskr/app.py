@@ -49,14 +49,12 @@ def login_post():
 	if client_name == "":
 		return redirect(url_for('login'))
 
-	resp = make_response()
-	resp.set_cookie("user", client_name)
-	return type(request.cookies.get('user'))
-
 	if db[TABLE_NAME].find({'name': client_name}).count() <= 0:
 		return redirect(url_for('new_user'))
 	else:
-		return redirect(url_for('main'))
+		resp = make_response(redirect(url_for('main')))
+		resp.set_cookie("user", client_name)
+		return resp
 
 @app.route('/new/')
 def new_user():
@@ -74,7 +72,9 @@ def new_user_input():
 	race = request.form['race']
 	new_doc = {"name":client_name, "age":age, "gender":gender, "race":race, "carb_log":{}, "serv_log":{}}
 	add(new_doc)
-	return redirect(url_for('main'))
+	resp = make_response(redirect(url_for('main')))
+	resp.set_cookie("user", client_name)
+	return resp
 
 @app.route('/main/')
 def main():
