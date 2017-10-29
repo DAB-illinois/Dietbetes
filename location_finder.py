@@ -15,6 +15,7 @@ def find_closest_centers(lat, lon):
     params = "latlng={lat},{lon}".format(lat=lat,lon=lon)
     url = "{base}{params}".format(base=base, params=params)
     response = requests.get(url)
+    print(response.json())
     state_ab = response.json()['results'][0]['formatted_address'].split(" ")[-3]
 
     centers = db[TABLE_NAME]
