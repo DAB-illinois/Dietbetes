@@ -114,7 +114,7 @@ def main():
 			continue
 		scat_values.append([a1c[i], age[i]])
 
-	return render_template('index.html', username=client_name, scatter_values=scat_values, carb_labels=carb_labels, carb_values=carb_values, serv_labels=serv_labels, serv_values=serv_values)
+	return render_template('index.html', username=request.cookies.get('user'), scatter_values=scat_values, carb_labels=carb_labels, carb_values=carb_values, serv_labels=serv_labels, serv_values=serv_values)
 
 @app.route('/main/', methods=['POST'])
 def my_form_post():
