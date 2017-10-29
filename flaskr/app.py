@@ -77,12 +77,14 @@ def new_user_input():
 
 @app.route('/main/')
 def main():
-	global client_name, carb_labels, carb_values, serv_values, serv_labels, scat_values
+	global carb_labels, carb_values, serv_values, serv_labels, scat_values
+	client_name = request.cookies.get('user')
 
 	if client_name == "":
 		return redirect(url_for('login'))
 
 	history = retrieve(client_name, db[TABLE_NAME])
+
 	carb_hist = history['carb_log']
 	carb_labels = []
 	carb_values = []
@@ -91,6 +93,9 @@ def main():
 	carb_labels.sort()
 	for i in carb_labels:
 		carb_values.append(carb_hist[i])
+	session['carb_labels'] = carb_labels
+	session['carb_values'] = carb_values
+
 	serv_hist = history['serv_log']
 	serv_labels = []
 	serv_values = []
@@ -99,6 +104,8 @@ def main():
 	serv_labels.sort()
 	for i in serv_labels:
 		serv_values.append(serv_hist[i])
+	session['serv_labels'] = serv_labels
+	session['serv_values'] = serv_values
 
 	self_data = retrieve(client_name, db[TABLE_NAME])
 	self_race = self_data['race']
@@ -112,20 +119,21 @@ def main():
 		if age[i] == 0:
 			continue
 		scat_values.append([a1c[i], age[i]])
+	session['scat_values'] = scat_values
 
-	return render_template('index.html', username=request.cookies.get('user'), scatter_values=scat_values, carb_labels=carb_labels, carb_values=carb_values, serv_labels=serv_labels, serv_values=serv_values)
+	return render_template('index.html', username=client_name, scatter_values=scat_values, carb_labels=carb_labels, carb_values=carb_values, serv_labels=serv_labels, serv_values=serv_values)
 
 @app.route('/main/', methods=['POST'])
 def my_form_post():
 	if request.cookies.get('user') == "":
 		return redirect(url_for('login'))
 
-	global queries
 	food = request.form['food']
 	if food == "":
 		return "Invalid Inputs!"
 
 	queries = fatsecret_api.search_food(food)
+	session['queries'] = queries
 
 	return redirect(url_for('choose_food'))
 
@@ -134,20 +142,18 @@ def choose_food():
 	if request.cookies.get('user') == "":
 		return redirect(url_for('login'))
 
-	global carb_labels, carb_values, serv_values, serv_labels, queries, scat_values
-
 	food_names = []
-	for food_data in queries:
+	for food_data in session.get('queries', None):
 		food_names.append(food_data["food_name"])
 
-	return render_template('choose_food.html', results=food_names, username=request.cookies.get('user'), scatter_values=scat_values, carb_labels=carb_labels, carb_values=carb_values, serv_labels=serv_labels, serv_values=serv_values)
+	return render_template('choose_food.html', results=food_names, username=request.cookies.get('user'), scatter_values=session.get('scat_values', None), carb_labels=session.get('carb_labels', None), carb_values=session.get('carb_values', None), serv_labels=session.get('serv_labels', None), serv_values=session.get('serv_values', None))
 
 @app.route('/choose_food/', methods=['POST'])
 def choose_food_post():
 	if request.cookies.get('user') == "":
 		return redirect(url_for('login'))
 
-	global queries
+	queries = session.get('queries', None)
 	food_name = request.form['type_food']
 	serving_size = int(request.form['serving_size'])
 	if serving_size == "":
