@@ -10,11 +10,24 @@ form div {
     font-size: 32px;
 }
 
-.radio_type {
-	margin: 0;
-	text-align: center;
-	padding: 0;
-	font-size: 40px;
+#contants {
+    float: left;
+    border: 2px red solid;
+    width: 30%;
+}
+
+#inputs {
+    float:left;
+    border: 2px red solid;
+    width: 60%;
+    
+}
+
+div .radio_type {
+    margin: 0;
+    text-align: center;
+    padding: 5%;
+    font-size: 40px;
 }
 
 form .radio_label {
@@ -29,3 +42,5 @@ form .radio_label {
 form p {
     text-align: center;
 }
+
+
