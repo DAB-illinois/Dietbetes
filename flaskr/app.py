@@ -86,11 +86,12 @@ def main():
 		return redirect(url_for('login'))
 
 	set_graph_data(client_name, session)
+	locations = [(37.4419, -122.1419)]
 	mymap = Map(
 		identifier="view-side",
 		lat=37.4419,
 		lng=-122.1419,
-		markers=[(37.4419, -122.1419)]
+		markers=[loc for loc in locations]
 	)
 
 	return render_template('index.html', mymap=mymap, username=request.cookies.get('user'), scatter_values=session.get('scat_values', None), carb_labels=session.get('carb_labels', None), carb_values=session.get('carb_values', None), serv_labels=session.get('serv_labels', None), serv_values=session.get('serv_values', None))
