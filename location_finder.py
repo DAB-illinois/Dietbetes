@@ -1,6 +1,5 @@
 import requests
 import json
-import reverse_geocoder as rg
 import state_abbrev
 import google_key
 
@@ -11,18 +10,9 @@ DATABASE_NAME = "databetes_app"
 TABLE_NAME = "health_centers"
 db = client[DATABASE_NAME]
 
-send_url = 'http://freegeoip.net/json'
-r = requests.get(send_url)
-j = json.loads(r.text)
-lat = 38
-lon = -90
-results = rg.search((lat, lon))
-state_ab = state_abbrev.us_state_abbrev[results[0]["admin1"]]
-
 print(str(lat) + "," + str(lon))
 
 def find_closest_centers(lat, lon):
-    global lat, lon
     centers = db[TABLE_NAME]
     closer_centers = []
     current_closer_center = []
