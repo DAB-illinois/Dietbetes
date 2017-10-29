@@ -25,6 +25,8 @@ def find_closest_centers():
         
         for center in state["centers"]:
             lat_lon = convert_to_lat_lon(center['address'])
+            if lat_lon == None:
+                continue
 
             if get_distance(lat, lon, lat_lon[0], lat_lon[1]) < 8.04672:
                 current_closer_center.append(x["name"])
@@ -40,6 +42,8 @@ import requests
 def convert_to_lat_lon(address):
     response = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address='+("+".join(address.split(" "))))
     resp_json_payload = response.json()
+    if resp_json_payload['results'] == []:
+        return None
     coord = resp_json_payload['results'][0]['geometry']['location']
     
     lat_lon = [coord['lat'], coord['lng']]
