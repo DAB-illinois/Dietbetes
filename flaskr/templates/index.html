@@ -120,7 +120,7 @@
 		        {	backgroundColor: calorieGraphColorTransparent,
 		        	borderColor: calorieGraphColorOpaque,
 		        	borderWidth: barChartBorderWidth,
-		        	data: [{% for item in carb_values %} {{ item }},
+		        	data: [{% for item in carb_values %} {{ item * 4 }},
 		                {% endfor %}
 		            ]
 		        }],
