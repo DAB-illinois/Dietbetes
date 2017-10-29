@@ -37,7 +37,7 @@ def find_closest_centers():
             distance = get_distance(lat, lon, lat_lon[0], lat_lon[1])
             print(distance)
 
-            if distance < (8.04672) * 10:
+            if distance < (8.04672) * 2:
                 current_closer_center.append(center["name"])
                 current_closer_center.append(lat_lon)
                 current_closer_center.append(center["telephone"])
