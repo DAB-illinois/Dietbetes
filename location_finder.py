@@ -10,13 +10,13 @@ DATABASE_NAME = "databetes_app"
 TABLE_NAME = "health_centers"
 db = client[DATABASE_NAME]
 
-base = "http://maps.googleapis.com/maps/api/geocode/json?"
-params = "latlng={lat},{lon}".format(lat=latitude,lon=longitude)
-url = "{base}{params}".format(base=base, params=params)
-response = requests.get(url)
-state_ab = response.json()['results'][0]['formatted_address'].split(" ")[-3]
-
 def find_closest_centers(lat, lon, state_ab):
+    base = "http://maps.googleapis.com/maps/api/geocode/json?"
+    params = "latlng={lat},{lon}".format(lat=latitude,lon=longitude)
+    url = "{base}{params}".format(base=base, params=params)
+    response = requests.get(url)
+    state_ab = response.json()['results'][0]['formatted_address'].split(" ")[-3]
+
     centers = db[TABLE_NAME]
     closer_centers = []
     current_closer_center = []
