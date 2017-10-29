@@ -59,7 +59,10 @@ def login_post():
 
 @app.route('/new/')
 def new_user():
-	if client_name == None:
+	try:
+		if client_name == None:
+			return redirect(url_for('login'))
+	except NameError:
 		return redirect(url_for('login'))
 	return render_template('new_user.html', username=client_name)
 
