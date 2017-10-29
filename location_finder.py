@@ -17,7 +17,6 @@ response = requests.get(url)
 state_ab = response.json()['results'][0]['formatted_address'].split(" ")[-3]
 
 def find_closest_centers(lat, lon, state_ab):
-    global lat, lon
     centers = db[TABLE_NAME]
     closer_centers = []
     current_closer_center = []
