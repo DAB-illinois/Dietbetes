@@ -47,7 +47,7 @@ def convert_to_lat_lon(address, name):
     response_name = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address='+("+".join(name.split(" ")))+"&key="+google_key.KEY)
     json_address = response_address.json()
     json_name = response_name.json()
-    if json_address['results'] == [] and json_name['results'] == []:
+    if len(json_address['results']) == 0 and len(json_name['results']) == 0:
         return None
     elif json_address['results'] == []:
         json_address = json_name
