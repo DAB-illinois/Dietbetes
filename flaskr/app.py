@@ -86,8 +86,15 @@ def main():
 		return redirect(url_for('login'))
 
 	set_graph_data(client_name, session)
+	mymap = Map(
+        identifier="view-side",
+        lat=37.4419,
+        lng=-122.1419,
+        markers=[(37.4419, -122.1419)]
+    )
+    session['map'] = mymap
 
-	return render_template('index.html', username=request.cookies.get('user'), scatter_values=session.get('scat_values', None), carb_labels=session.get('carb_labels', None), carb_values=session.get('carb_values', None), serv_labels=session.get('serv_labels', None), serv_values=session.get('serv_values', None))
+	return render_template('index.html', mymap=request.cookies.get('map'), username=request.cookies.get('user'), scatter_values=session.get('scat_values', None), carb_labels=session.get('carb_labels', None), carb_values=session.get('carb_values', None), serv_labels=session.get('serv_labels', None), serv_values=session.get('serv_values', None))
 
 
 @app.route('/main/', methods=['POST'])
@@ -152,18 +159,6 @@ def choose_food_post():
 	update(request.cookies.get('user'), {"carb_log":old_carbs, "serv_log":old_serv})
 	
 	return redirect(url_for('main'))
-
-@app.route("/map/")
-def mapview():
-    # creating a map in the view
-    mymap = Map(
-        identifier="view-side",
-        lat=37.4419,
-        lng=-122.1419,
-        markers=[(37.4419, -122.1419)]
-    )
-    
-    return render_template('map.html', mymap=mymap)
 
 def set_graph_data(user, session):
 	history = retrieve(user, db[TABLE_NAME])
