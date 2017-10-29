@@ -1,5 +1,5 @@
 form {
-    margin-top: 2%;
+    margin-top: 0;
     margin-right: 5%;
     margin-left: 5%;
     width: 90%;
@@ -12,27 +12,26 @@ form div {
 
 #contants {
     float: left;
-    border: 2px red solid;
     width: 30%;
+    height: 50%;
 }
 
 #inputs {
     float:left;
-    border: 2px red solid;
-    width: 60%;
-    
+    width: 70%;    
 }
 
 div .radio_type {
     margin: 0;
     text-align: center;
-    padding: 5%;
-    font-size: 40px;
+    padding: 15%;
+    font-size: 30px;
 }
 
 form .radio_label {
     margin: 0;
     text-align: center;
+    margin-bottom: 5%;
     padding: 1%;
     font-size: 20px;
     width: 25%;
@@ -42,5 +41,7 @@ form .radio_label {
 form p {
     text-align: center;
 }
+
+
 
 
