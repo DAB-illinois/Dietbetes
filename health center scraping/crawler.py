@@ -19,6 +19,21 @@ def add(dic):
 	result = posts.insert_one(dic)
 	print('One post: {0}'.format(result.inserted_id))
 
+def convert_to_lat_lon(address, name):
+    response_address = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address='+("+".join(address.split(" ")))+"&key="+google_key.KEY)
+    response_name = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address='+("+".join(name.split(" ")))+"&key="+google_key.KEY)
+    json_address = response_address.json()
+    json_name = response_name.json()
+    if len(json_address['results']) == 0 and len(json_name['results']) == 0:
+        return None
+    elif json_address['results'] == []:
+        json_address = json_name
+    coord = json_address['results'][0]['geometry']['location']
+    
+    lat_lon = [coord['lat'], coord['lng']]
+    
+    return lat_lon
+
 def get_page(url):
 	req = Request(inner_url, headers={'User-Agent': 'Mozilla/5.0'})
 	urlRequest = urlopen(inner_url)
@@ -45,7 +60,8 @@ def get_page(url):
 			address = final.strip()
 		if element.tag == "span" and "itemprop" in attrib and attrib['itemprop'] == "telephone":
 			tele = element.text_content()
-	return name, address, tele, address.split(" ")[-2]
+	coord = convert_to_lat_lon(address, name)
+	return name, address, tele, address.split(" ")[-2], coord
 
 data = {}
 
@@ -63,11 +79,11 @@ for i in range(1, MAX + 1):
 			if "/organizations/ambulatory_health_care/federally-qualified-health-center-fqhc_261qf0400x/" in attrib["href"] and ".aspx" in attrib["href"]:
 				inner_url = inner_base_url + attrib["href"]
 				
-				name, address, tele, state = get_page(inner_url)
+				name, address, tele, state, coord = get_page(inner_url)
 				if state in data:
-					data[state].append({"name": name, "address": address, "telephone": tele})
+					data[state].append({"name": name, "address": address, "telephone": tele, "coord":coord})
 				else:
-					data[state] = [{"name": name, "address": address, "telephone": tele}]
+					data[state] = [{"name": name, "address": address, "telephone": tele, "coord":coord}]
 
 for i, j in data.items():
 	add({"state":i, "centers":j})
