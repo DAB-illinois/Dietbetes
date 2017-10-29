@@ -51,7 +51,7 @@ def login_post():
 
 	resp = make_response()
 	resp.set_cookie("user", client_name)
-	return request.cookies.get('user')
+	return type(request.cookies.get('user'))
 
 	if db[TABLE_NAME].find({'name': client_name}).count() <= 0:
 		return redirect(url_for('new_user'))
