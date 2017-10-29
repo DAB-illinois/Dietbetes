@@ -9,37 +9,38 @@ DATABASE_NAME = "databetes_app"
 TABLE_NAME = "health_centers"
 db = client[DATABASE_NAME]
 
-def find_closest_centers(lat, lon):
-    base = "https://maps.googleapis.com/maps/api/geocode/json?"
-    params = "latlng={lat},{lon}".format(lat=lat,lon=lon)
-    url = "{base}{params}".format(base=base, params=params)
-    response = requests.get(url+"&key="+google_key.KEY)
-    print(response.json())
-    state_ab = response.json()['results'][0]['formatted_address'].split(" ")[-3]
+def update(state_ab, dic):
+    posts = db[TABLE_NAME]
+    posts.update_many({"state": state_ab}, {"$set": dic})
+
+def get_lat_lon_for_health_centers():
+    # base = "https://maps.googleapis.com/maps/api/geocode/json?"
+    # params = "latlng={lat},{lon}".format(lat=lat,lon=lon)
+    # url = "{base}{params}".format(base=base, params=params)
+    # response = requests.get(url+"&key="+google_key.KEY)
+    # print(response.json())
+    # state_ab = response.json()['results'][0]['formatted_address'].split(" ")[-3]
 
     centers = db[TABLE_NAME]
     closer_centers = []
     current_closer_center = []
 
-    for state in centers.find({'state':state_ab}):
-        
+    for state in centers.find():
+        new_dic = {"centers":[]}
         for center in state["centers"]:
-            
             lat_lon = convert_to_lat_lon(center['address'], center['name'])
             if lat_lon == None:
                 continue
-            # distance = get_distance(lat, lon, lat_lon[0], lat_lon[1])
-            # print(distance)
+            
+            center_data = {}
+            center_data["name"] = center["name"]
+            center_data["telephone"] = center["telephone"]
+            center_data["address"] = center["address"]
+            center_data["coord"] = lat_lon
 
-            # if distance < (8.04672) * 3:
-            current_closer_center.append(center["name"])
-            current_closer_center.append(lat_lon)
-            current_closer_center.append(center["telephone"])
 
-            closer_centers.append(current_closer_center)
-            current_closer_center = []
-
-    return closer_centers
+            new_dic["centers"].append(center_data)
+        update(state['state'], new_dic)
 
 def convert_to_lat_lon(address, name):
     response_address = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address='+("+".join(address.split(" ")))+"&key="+google_key.KEY)
