@@ -110,6 +110,7 @@
 		            "{{item}}", {% endfor %}
 		        ],
 		        datasets: [{
+		        	label: "Amount of Carbohydrate in grams (g)"
 		            backgroundColor: mainGraphColorTransparent,
 		            borderColor: mainGraphColorOpaque,
 		            borderWidth: barChartBorderWidth,
@@ -117,7 +118,9 @@
 		                {% endfor %}
 		            ]
 		        },
-		        {	backgroundColor: calorieGraphColorTransparent,
+		        {
+		        	label: "Calories of Carbohydrate"
+		        	backgroundColor: calorieGraphColorTransparent,
 		        	borderColor: calorieGraphColorOpaque,
 		        	borderWidth: barChartBorderWidth,
 		        	data: [{% for item in carb_values %} {{ item * 4 }},
@@ -126,18 +129,14 @@
 		        }],
 		    },
 		    options: {
-		        legend: { display: false },
+		        legend: { display: true},
 				maintainAspectRatio: false,
 		        scales: {
 		            yAxes: [{
 		                ticks: {
 		                    beginAtZero:true,
 		                },
-		            scaleLabel: {
-					        display: true,
-					        labelString: 'Amount of Carbohydrate'
-					    }
-		            }],
+		            ],
 		            xAxes: [{ 
 		                scaleLabel: {
 					        display: true,
