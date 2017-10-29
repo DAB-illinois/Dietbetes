@@ -87,7 +87,7 @@ input {
 	height: 100%;
 }
 
-#sndmap {
+div#sndmap.map {
 	margin: 0 auto;
 	display: block;
 	width: 100%;
