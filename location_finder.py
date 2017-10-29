@@ -16,20 +16,23 @@ lon = j['longitude']
 
 
 def find_closest_centers():
+    global lat, lon
     centers = db[TABLE_NAME]
     closer_centers = []
     current_closer_center = []
 
-    for x in centers.find():
-        lat_lon = convert_to_lat_lon(x["address"])
+    for state in centers.find():
+        
+        for center in state["centers"]:
+            lat_lon = convert_to_lat_lon(center['address'])
 
-        if get_distance(lat, lon, lat_lon[0], lat_lon[1]) < 8.04672:
-            current_closer_center.append(x["name"])
-            current_closer_center.append(lat_lon)
-            current_closer_center.append(x["telephone"])
+            if get_distance(lat, lon, lat_lon[0], lat_lon[1]) < 8.04672:
+                current_closer_center.append(x["name"])
+                current_closer_center.append(lat_lon)
+                current_closer_center.append(x["telephone"])
 
-            closer_centers.append(current_closer_center)
-            current_closer_center = []
+                closer_centers.append(current_closer_center)
+                current_closer_center = []
 
     return closer_centers
 

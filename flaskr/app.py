@@ -13,6 +13,12 @@ DIABETES_SET_TABLE = "diabetes_data_set"
 db = client[DATABASE_NAME]
 client_name = ""
 
+from flask_googlemaps import GoogleMaps
+import key
+
+app.config['GOOGLEMAPS_KEY'] = key.GOOGLE_MAPS_KEY
+GoogleMaps(app)
+
 import fatsecret_api
 import fatsecret_crawl
 
