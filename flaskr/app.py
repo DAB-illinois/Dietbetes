@@ -95,7 +95,7 @@ def main():
 	params = "latlng={lat},{lon}".format(lat=coords[0][0],lon=coords[0][1])
 	url = "{base}{params}".format(base=base, params=params)
 	response = requests.get(url+"&key="+google_key.KEY)
-	state_ab = response.json()['results'][0]['formatted_address'].split(" ")[-3]
+	state_ab = "MO"
 
 	markers = []
 	for r in db[TABLE_NAME].find({"state":state_ab}):
