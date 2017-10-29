@@ -11,7 +11,7 @@ TABLE_NAME = "health_centers"
 db = client[DATABASE_NAME]
 
 def find_closest_centers(lat, lon):
-    base = "http://maps.googleapis.com/maps/api/geocode/json?"
+    base = "https://maps.googleapis.com/maps/api/geocode/json?"
     params = "latlng={lat},{lon}".format(lat=lat,lon=lon)
     url = "{base}{params}".format(base=base, params=params)
     response = requests.get(url+"&key="+google_key.KEY)
