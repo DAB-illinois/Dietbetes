@@ -11,7 +11,6 @@ DATABASE_NAME = "databetes_app"
 TABLE_NAME = "user_data"
 DIABETES_SET_TABLE = "diabetes_data_set"
 db = client[DATABASE_NAME]
-client_name = ""
 
 from flask_googlemaps import GoogleMaps
 from flask_googlemaps import Map
@@ -118,7 +117,7 @@ def main():
 
 @app.route('/main/', methods=['POST'])
 def my_form_post():
-	if client_name == "":
+	if request.cookies.get('user') == "":
 		return redirect(url_for('login'))
 
 	global queries
@@ -132,23 +131,23 @@ def my_form_post():
 
 @app.route('/choose_food/')
 def choose_food():
-	if client_name == "":
+	if request.cookies.get('user') == "":
 		return redirect(url_for('login'))
 
-	global client_name, carb_labels, carb_values, serv_values, serv_labels, queries, scat_values
+	global carb_labels, carb_values, serv_values, serv_labels, queries, scat_values
 
 	food_names = []
 	for food_data in queries:
 		food_names.append(food_data["food_name"])
 
-	return render_template('choose_food.html', results=food_names, username=client_name, scatter_values=scat_values, carb_labels=carb_labels, carb_values=carb_values, serv_labels=serv_labels, serv_values=serv_values)
+	return render_template('choose_food.html', results=food_names, username=request.cookies.get('user'), scatter_values=scat_values, carb_labels=carb_labels, carb_values=carb_values, serv_labels=serv_labels, serv_values=serv_values)
 
 @app.route('/choose_food/', methods=['POST'])
 def choose_food_post():
-	if client_name == "":
+	if request.cookies.get('user') == "":
 		return redirect(url_for('login'))
 
-	global client_name, queries
+	global queries
 	food_name = request.form['type_food']
 	serving_size = int(request.form['serving_size'])
 	if serving_size == "":
@@ -162,7 +161,7 @@ def choose_food_post():
 	carbs_per_serv = float(fatsecret_crawl.get_carb_per_serving(url))
 	total_carbs = int(float(serving_size) * carbs_per_serv *100)/100
 	current_time = str(datetime.now()).split(" ")[0]
-	old = retrieve(client_name, db[TABLE_NAME])
+	old = retrieve(request.cookies.get('user'), db[TABLE_NAME])
 	old_carbs = old['carb_log']
 	old_serv = old['serv_log']
 	if current_time in old_carbs:
@@ -172,7 +171,7 @@ def choose_food_post():
 		old_carbs[current_time] = total_carbs
 		old_serv[current_time] = serving_size
 
-	update(client_name, {"carb_log":old_carbs, "serv_log":old_serv})
+	update(request.cookies.get('user'), {"carb_log":old_carbs, "serv_log":old_serv})
 	
 	return redirect(url_for('main'))
 
