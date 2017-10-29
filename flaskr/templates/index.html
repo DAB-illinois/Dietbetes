@@ -19,17 +19,17 @@
         <div class="chart" style="margin: 0 0 30px 0;">
             <p style="font-size:30px;">Daily Serving Intake Trends</p>
             <canvas id="serving_chart"></canvas>
-            <p>description</p>
+            <p>This graph displays how many servings the user has had in given day(s).</p>
         </div>
         <div class="chart" style="margin: 0 0 30px 0;">
             <p style="font-size:30px;">Daily Carbohydrate Intake Trends</p>
             <canvas id="carb_chart"></canvas>
-            <p>description</p>
+            <p>This graph displays how much carbohydrate the user has had in given day(s).</p>
         </div>
         <div class="chart" style="margin: 0 0 30px 0;">
             <p style="font-size:30px;">Diabetic Patients within your Race and Gender</p>
             <canvas id="compare_chart"></canvas>
-            <p>description</p>
+            <p>This graph displays around 100,000 diabetic patients who have the same attributes as the user's age and race. A1c values refer to the patients' blood sugar (< 5.7: normal | 5.7< A1c < 6.4: prediabetes | > 6.4: diabetes) </p>
         </div>
     </div>
     <div class="outer" id="log">
@@ -71,13 +71,23 @@
 	        }]
 	    },
         options: {
-            legend: { display: true },
+            legend: { display: false },
             maintainAspectRatio: false,
             scales: {
 	            yAxes: [{
 	                ticks: {
 	                    beginAtZero:true,
-	                }
+	                },
+	            scaleLabel: {
+				        display: true,
+				        labelString: 'Servings'
+				    }    
+	            }],
+	            xAxes: [{ 
+	                scaleLabel: {
+				        display: true,
+				        labelString: 'Dates'
+				    }
 	            }]
 	        }
     	}
@@ -105,7 +115,17 @@
 	            yAxes: [{
 	                ticks: {
 	                    beginAtZero:true,
-	                }
+	                },
+	            scaleLabel: {
+				        display: true,
+				        labelString: 'Amount of Carbohydrate'
+				    }
+	            }],
+	            xAxes: [{ 
+	                scaleLabel: {
+				        display: true,
+				        labelString: 'Dates'
+				    }
 	            }]
 	        }
         }
