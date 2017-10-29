@@ -39,8 +39,6 @@ def retrieve(user_id, posts):
 
 @app.route('/')
 def login():
-	global client_name
-	client_name = ""
 	return render_template('login.html')
 
 @app.route('/', methods=['POST'])
@@ -51,11 +49,11 @@ def login_post():
 		return redirect(url_for('login'))
 
 	if db[TABLE_NAME].find({'name': client_name}).count() <= 0:
-		return redirect(url_for('new_user'))
+		resp = make_response(redirect(url_for('new_user')))
 	else:
 		resp = make_response(redirect(url_for('main')))
-		resp.set_cookie("user", client_name)
-		return resp
+	resp.set_cookie("user", client_name)
+	return resp
 
 @app.route('/new/')
 def new_user():
@@ -76,9 +74,7 @@ def new_user_input():
 	race = request.form['race']
 	new_doc = {"name":client_name, "age":age, "gender":gender, "race":race, "carb_log":{}, "serv_log":{}}
 	add(new_doc)
-	resp = make_response(redirect(url_for('main')))
-	resp.set_cookie("user", client_name)
-	return resp
+	return redirect(url_for('main'))
 
 @app.route('/main/')
 def main():
