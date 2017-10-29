@@ -6,6 +6,10 @@ form {
     padding-bottom: 5%;
 }
 
+form div {
+    font-size: 32px;
+}
+
 form p {
 	margin: 0;
 	text-align: center;
