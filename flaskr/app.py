@@ -57,6 +57,7 @@ def login_post():
 
 @app.route('/new/')
 def new_user():
+	client_name = client_name = request.cookies.get('user');
 	try:
 		if client_name == None:
 			return redirect(url_for('login'))
@@ -66,7 +67,7 @@ def new_user():
 
 @app.route('/new/', methods=['POST'])
 def new_user_input():
-	global client_name
+	client_name = request.cookies.get('user');
 	if "gender" not in request.form or "age" not in request.form or "race" not in request.form:
 		return "Invalid params"
 	gender = request.form['gender']
