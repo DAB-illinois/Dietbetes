@@ -1,4 +1,5 @@
 from datetime import datetime
+import random
 from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash, make_response
 app = Flask(__name__) # create the application instance :)
 app.config.from_object(__name__) # load config from this file , flaskr.py
@@ -18,7 +19,7 @@ from flask_googlemaps import Map
 import key
 
 app.config['GOOGLEMAPS_KEY'] = key.GOOGLE_MAPS_KEY
-app.config['SECRET_KEY'] = "asdf"
+app.config['SECRET_KEY'] = str(random.random())
 GoogleMaps(app)
 
 import fatsecret_api
