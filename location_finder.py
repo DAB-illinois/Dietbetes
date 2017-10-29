@@ -10,9 +10,9 @@ DATABASE_NAME = "databetes_app"
 TABLE_NAME = "health_centers"
 db = client[DATABASE_NAME]
 
-def find_closest_centers(lat, lon, state_ab):
+def find_closest_centers(lat, lon):
     base = "http://maps.googleapis.com/maps/api/geocode/json?"
-    params = "latlng={lat},{lon}".format(lat=latitude,lon=longitude)
+    params = "latlng={lat},{lon}".format(lat=lat,lon=lon)
     url = "{base}{params}".format(base=base, params=params)
     response = requests.get(url)
     state_ab = response.json()['results'][0]['formatted_address'].split(" ")[-3]
