@@ -90,7 +90,7 @@ def main():
 
 	set_graph_data(client_name, session)
 
-	coords = [[38.4419, -90.1419]
+	coords = [[38.4419, -90.1419]]
 	base = "https://maps.googleapis.com/maps/api/geocode/json?"
 	params = "latlng={lat},{lon}".format(lat=coords[0],lon=coords[1])
 	url = "{base}{params}".format(base=base, params=params)
