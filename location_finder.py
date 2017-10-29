@@ -10,8 +10,6 @@ DATABASE_NAME = "databetes_app"
 TABLE_NAME = "health_centers"
 db = client[DATABASE_NAME]
 
-print(str(lat) + "," + str(lon))
-
 def find_closest_centers(lat, lon):
     centers = db[TABLE_NAME]
     closer_centers = []
