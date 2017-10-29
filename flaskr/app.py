@@ -145,9 +145,9 @@ def choose_food_post():
 
 	global client_name, queries
 	food_name = request.form['type_food']
-	serving_size = request.form['serving_size']
+	serving_size = int(request.form['serving_size'])
 	if serving_size == "":
-		return "Invalid Inputs!"
+		return "Invalid Input!"
 	data = {}
 	for food_data in queries:
 		if food_name == food_data["food_name"]:
