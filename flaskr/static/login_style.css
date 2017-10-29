@@ -23,3 +23,7 @@ form .radio_label {
     padding: 1%;
     font-size: 20px;
 }
+
+form p {
+    text-align: center;
+}
