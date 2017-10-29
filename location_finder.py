@@ -16,7 +16,7 @@ j = json.loads(r.text)
 lat = j['latitude']
 lon = j['longitude']
 results = rg.search((lat, lon))
-state_ab = state_abbrev.us_state_abbrev[results[0]["admin1"]
+state_ab = state_abbrev.us_state_abbrev[results[0]["admin1"]]
 
 
 def find_closest_centers():
