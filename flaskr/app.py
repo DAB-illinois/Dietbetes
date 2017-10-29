@@ -160,8 +160,12 @@ def choose_food_post():
 	old = retrieve(client_name, db[TABLE_NAME])
 	old_carbs = old['carb_log']
 	old_serv = old['serv_log']
-	old_carbs[current_time] = total_carbs
-	old_serv[current_time] = serving_size
+	if current_time in old_carbs:
+		old_carbs[current_time] += total_carbs
+		old_serv[current_time] += serving_size
+	else:
+		old_carbs[current_time] = total_carbs
+		old_serv[current_time] = serving_size
 
 	update(client_name, {"carb_log":old_carbs, "serv_log":old_serv})
 	
