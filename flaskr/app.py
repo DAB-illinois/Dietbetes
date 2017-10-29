@@ -98,7 +98,7 @@ def main():
 	state_ab = "MO"
 
 	markers = []
-	for r in db[TABLE_NAME].find({"state":state_ab}):
+	for r in db[HEALTH_TABLE_NAME].find({"state":state_ab}):
 		for center in r['centers']:
 			coord = center['coord']
 			if coord == None:
