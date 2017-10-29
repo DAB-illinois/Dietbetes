@@ -70,4 +70,4 @@ for i in range(1, MAX + 1):
 					data[state] = [{"name": name, "address": address, "telephone": tele}]
 
 for i, j in data.items():
-	add({i:j})
+	add({"state":i, "centers":j})
