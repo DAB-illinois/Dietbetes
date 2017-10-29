@@ -209,7 +209,7 @@ def set_graph_data(user, session):
 	for i in range(len(a1c)):
 		if age[i] == 0:
 			continue
-		scat_values.append([a1c[i], age[i]])
+		scat_values.append([a1c[i]+(1*random.random()), age[i]])
 	session['scat_values'] = scat_values
 
 if __name__ == "__main__":
