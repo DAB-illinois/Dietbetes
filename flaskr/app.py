@@ -111,9 +111,9 @@ def main():
 			})
 
 	markers.append({
-			'icon': 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
-			'lat': 38,
-			'lng': -90,
+			'icon': 'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
+			'lat': coords[0][0],
+			'lng': coords[0][1],
 			'infobox': "<b>Test</b>"
 			})
 	sndmap = Map(
