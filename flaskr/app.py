@@ -89,8 +89,8 @@ def main():
 	locations = [(38.4419, -90.1419)]
 	sndmap = Map(
         identifier="sndmap",
-        lat=37.4419,
-        lng=-122.1419,
+        lat=locations[0][0],
+        lng=locations[0][1],
         markers=[
           {
              'icon': 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',

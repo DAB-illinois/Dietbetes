@@ -21,7 +21,7 @@ state_ab = state_abbrev.us_state_abbrev[results[0]["admin1"]]
 
 print(str(lat) + "," + str(lon))
 
-def find_closest_centers():
+def find_closest_centers(lat, lon):
     global lat, lon
     centers = db[TABLE_NAME]
     closer_centers = []
