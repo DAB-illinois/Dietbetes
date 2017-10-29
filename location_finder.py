@@ -36,15 +36,14 @@ def find_closest_centers():
 
     return closer_centers
 
-from geopy.geocoders import Nominatim
+import requests
 def convert_to_lat_lon(address):
-    lat_lon = []
-    geolocator = Nominatim()
-    location = geolocator.geocode(address)
-
-    lat_lon.append(location.latitude)
-    lat_lon.append(location.longitude)
-
+    response = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address='+("+".join(address.split(" "))))
+    resp_json_payload = response.json()
+    coord = resp_json_payload['results'][0]['geometry']['location']
+    
+    lat_lon = [coord['lat'], coord['lng']]
+    
     return lat_lon
 
 from math import sin, cos, sqrt, atan2, radians
