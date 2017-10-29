@@ -18,6 +18,7 @@ from flask_googlemaps import Map
 import key
 
 app.config['GOOGLEMAPS_KEY'] = key.GOOGLE_MAPS_KEY
+app.config['SECRET_KEY'] = "asdf"
 GoogleMaps(app)
 
 import fatsecret_api
