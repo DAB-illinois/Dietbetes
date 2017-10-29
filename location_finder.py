@@ -28,7 +28,7 @@ def find_closest_centers():
             if lat_lon == None:
                 continue
 
-            if get_distance(lat, lon, lat_lon[0], lat_lon[1]) < 8.04672:
+            if get_distance(lat, lon, lat_lon[0], lat_lon[1]) < (8.04672) * 2:
                 current_closer_center.append(center["name"])
                 current_closer_center.append(lat_lon)
                 current_closer_center.append(center["telephone"])
@@ -73,6 +73,9 @@ def get_distance(lat_user, lon_user, lat_center, lon_center):
     distance = R * c
 
     return distance
+
+def main():
+    print(find_closest_centers())
 
 	# HTML and Javascript version of the nearest location finder
 
