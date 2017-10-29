@@ -85,43 +85,7 @@ def main():
 	if client_name == "":
 		return redirect(url_for('login'))
 
-	history = retrieve(client_name, db[TABLE_NAME])
-
-	carb_hist = history['carb_log']
-	carb_labels = []
-	carb_values = []
-	for i in carb_hist:
-		carb_labels.append(i)
-	carb_labels.sort()
-	for i in carb_labels:
-		carb_values.append(carb_hist[i])
-	session['carb_labels'] = carb_labels
-	session['carb_values'] = carb_values
-
-	serv_hist = history['serv_log']
-	serv_labels = []
-	serv_values = []
-	for i in serv_hist:
-		serv_labels.append(i)
-	serv_labels.sort()
-	for i in serv_labels:
-		serv_values.append(serv_hist[i])
-	session['serv_labels'] = serv_labels
-	session['serv_values'] = serv_values
-
-	self_data = retrieve(client_name, db[TABLE_NAME])
-	self_race = self_data['race']
-	self_gender = self_data['gender']
-	diabetes_db_data = db[DIABETES_SET_TABLE].find_one({"race/gender":self_race.lower()+","+self_gender.lower()})
-	diabetes_graph = diabetes_db_data['graph']
-	a1c = diabetes_graph['a1c']
-	age = diabetes_graph['age']
-	scat_values = []
-	for i in range(len(a1c)):
-		if age[i] == 0:
-			continue
-		scat_values.append([a1c[i], age[i]])
-	session['scat_values'] = scat_values
+	set_graph_data(client_name, session)
 
 	return render_template('index.html', username=client_name, scatter_values=scat_values, carb_labels=carb_labels, carb_values=carb_values, serv_labels=serv_labels, serv_values=serv_values)
 
@@ -147,6 +111,7 @@ def choose_food():
 	food_names = []
 	for food_data in session.get('queries', None):
 		food_names.append(food_data["food_name"])
+	set_graph_data(client_name, session)
 
 	return render_template('choose_food.html', results=food_names, username=request.cookies.get('user'), scatter_values=session.get('scat_values', None), carb_labels=session.get('carb_labels', None), carb_values=session.get('carb_values', None), serv_labels=session.get('serv_labels', None), serv_values=session.get('serv_values', None))
 
@@ -194,6 +159,43 @@ def mapview():
     )
     
     return render_template('map.html', mymap=mymap)
+
+def set_graph_data(user, session):
+	history = retrieve(user, db[TABLE_NAME])
+	carb_hist = history['carb_log']
+	carb_labels = []
+	carb_values = []
+	for i in carb_hist:
+		carb_labels.append(i)
+	carb_labels.sort()
+	for i in carb_labels:
+		carb_values.append(carb_hist[i])
+	session['carb_labels'] = carb_labels
+	session['carb_values'] = carb_values
+
+	serv_hist = history['serv_log']
+	serv_labels = []
+	serv_values = []
+	for i in serv_hist:
+		serv_labels.append(i)
+	serv_labels.sort()
+	for i in serv_labels:
+		serv_values.append(serv_hist[i])
+	session['serv_labels'] = serv_labels
+	session['serv_values'] = serv_values
+
+	self_race = history['race']
+	self_gender = history['gender']
+	diabetes_db_data = db[DIABETES_SET_TABLE].find_one({"race/gender":self_race.lower()+","+self_gender.lower()})
+	diabetes_graph = diabetes_db_data['graph']
+	a1c = diabetes_graph['a1c']
+	age = diabetes_graph['age']
+	scat_values = []
+	for i in range(len(a1c)):
+		if age[i] == 0:
+			continue
+		scat_values.append([a1c[i], age[i]])
+	session['scat_values'] = scat_values
 
 if __name__ == "__main__":
 	app.run(debug=True, threaded=True)
