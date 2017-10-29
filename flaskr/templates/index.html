@@ -57,6 +57,8 @@
 		// bar chart data
 		mainGraphColorTransparent = "rgba(77, 255, 77, 0.6)";
 		mainGraphColorOpaque = "rgba(77, 255, 77, 1)";
+		calorieGraphColorOpaque = "rgba(255,128,128,1)"
+		calorieGraphColorTransparent = "rgba(255,128,128,0.5)";
 		barChartBorderWidth = 1.5;
 
 		steps = 10
@@ -114,7 +116,14 @@
 		            data: [{% for item in carb_values %} {{ item }},
 		                {% endfor %}
 		            ]
-		        }]
+		        },
+		        {	backgroundColor: calorieGraphColorTransparent,
+		        	borderColor: calorieGraphColorOpaque,
+		        	borderWidth: barChartBorderWidth,
+		        	data: [{% for item in carb_values %} {{ item * 4 }},
+		                {% endfor %}
+		            ]
+		        }],
 		    },
 		    options: {
 		        legend: { display: false },
