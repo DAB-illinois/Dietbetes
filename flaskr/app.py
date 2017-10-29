@@ -113,6 +113,7 @@ def choose_food():
 	for food_data in session.get('queries', None):
 		food_names.append(food_data["food_name"])
 	set_graph_data(request.cookies.get('user'), session)
+	food_names.sort()
 
 	return render_template('choose_food.html', results=food_names, username=request.cookies.get('user'), scatter_values=session.get('scat_values', None), carb_labels=session.get('carb_labels', None), carb_values=session.get('carb_values', None), serv_labels=session.get('serv_labels', None), serv_values=session.get('serv_values', None))
 
