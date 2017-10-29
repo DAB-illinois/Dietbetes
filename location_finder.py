@@ -24,14 +24,14 @@ def find_closest_centers():
     for state in centers.find():
         
         for center in state["centers"]:
-            lat_lon = convert_to_lat_lon(center['address'])
+            lat_lon = convert_to_lat_lon(center['address'], center['name'])
             if lat_lon == None:
                 continue
 
             if get_distance(lat, lon, lat_lon[0], lat_lon[1]) < 8.04672:
-                current_closer_center.append(x["name"])
+                current_closer_center.append(center["name"])
                 current_closer_center.append(lat_lon)
-                current_closer_center.append(x["telephone"])
+                current_closer_center.append(center["telephone"])
 
                 closer_centers.append(current_closer_center)
                 current_closer_center = []
@@ -39,12 +39,16 @@ def find_closest_centers():
     return closer_centers
 
 import requests
-def convert_to_lat_lon(address):
-    response = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address='+("+".join(address.split(" "))))
-    resp_json_payload = response.json()
-    if resp_json_payload['results'] == []:
+def convert_to_lat_lon(address, name):
+    response_address = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address='+("+".join(address.split(" "))))
+    response_name = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address='+("+".join(name.split(" "))))
+    json_address = response_address.json()
+    json_name = response_name.json()
+    if json_address['results'] == [] and json_name['results'] == []:
         return None
-    coord = resp_json_payload['results'][0]['geometry']['location']
+    elif json_address['results'] == []:
+        json_address = json_name
+    coord = json_address['results'][0]['geometry']['location']
     
     lat_lon = [coord['lat'], coord['lng']]
     
