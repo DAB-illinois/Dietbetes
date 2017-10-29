@@ -44,7 +44,7 @@
     	</form>
     </div>
 
-    {% with map=googlemap_obj("another-map", 37.4419, -122.1419, markers=[(37.4419, -122.1419), (37.4300, -122.1400, "Hello")]) %}
+    {% with map=googlemap_obj("another-map", {{ lat }}, -122.1419, markers=[(37.4419, -122.1419), (37.4300, -122.1400, "Hello")]) %}
 	    {{map.html}}
 	    {{map.js}}
 	{% endwith %}
