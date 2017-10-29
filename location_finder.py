@@ -58,6 +58,7 @@ def convert_to_lat_lon(address, name):
     coord = json_address['results'][0]['geometry']['location']
     
     lat_lon = [coord['lat'], coord['lng']]
+    print(lat_lon)
     
     return lat_lon
 
