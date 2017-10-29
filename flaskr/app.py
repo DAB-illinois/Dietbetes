@@ -101,6 +101,8 @@ def main():
 	for r in db[TABLE_NAME].find({"state":state_ab}):
 		for center in r['centers']:
 			coord = center['coord']
+			if coord == None:
+				continue
 			markers.append({
 			'icon': 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
 			'lat': coord[0],
