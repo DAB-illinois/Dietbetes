@@ -92,16 +92,16 @@ def main():
 
 	coords = [[38.4419, -90.1419]
 	base = "https://maps.googleapis.com/maps/api/geocode/json?"
-    params = "latlng={lat},{lon}".format(lat=coords[0],lon=coords[1])
-    url = "{base}{params}".format(base=base, params=params)
-    response = requests.get(url+"&key="+google_key.KEY)
-    state_ab = response.json()['results'][0]['formatted_address'].split(" ")[-3]
+	params = "latlng={lat},{lon}".format(lat=coords[0],lon=coords[1])
+	url = "{base}{params}".format(base=base, params=params)
+	response = requests.get(url+"&key="+google_key.KEY)
+	state_ab = response.json()['results'][0]['formatted_address'].split(" ")[-3]
 
-    markers = []
-    for r in db[TABLE_NAME].find({"state":state_ab}):
-    	for center in r['centers']:
-    		coord = center[u'coord']
-    		markers.append({
+	markers = []
+	for r in db[TABLE_NAME].find({"state":state_ab}):
+		for center in r['centers']:
+			coord = center[u'coord']
+			markers.append({
 			'icon': 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
 			'lat': coord[0],
 			'lng': coord[1],
