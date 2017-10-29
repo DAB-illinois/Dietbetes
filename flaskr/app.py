@@ -80,7 +80,6 @@ def new_user_input():
 
 @app.route('/main/')
 def main():
-	global carb_labels, carb_values, serv_values, serv_labels, scat_values
 	client_name = request.cookies.get('user')
 
 	if client_name == "":
@@ -91,16 +90,16 @@ def main():
 	coords = [(38.4419, -90.1419)]
 	#close_centers = health_center_finder.find_closest_centers(coords[0][0],coords[0][1])
 	markers = []
-	for i in close_centers:
-		name = i[0]
-		coord = i[1]
-		tele = i[2]
-		markers.append({
-             'icon': 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
-             'lat': coord[0],
-             'lng': coord[1],
-             'infobox': "<b>"+name+". "+tele+"</b>"
-          })
+	# for i in close_centers:
+	# 	name = i[0]
+	# 	coord = i[1]
+	# 	tele = i[2]
+	# 	markers.append({
+ #             'icon': 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+ #             'lat': coord[0],
+ #             'lng': coord[1],
+ #             'infobox': "<b>"+name+". "+tele+"</b>"
+ #          })
 
 	sndmap = Map(
         identifier="sndmap",
