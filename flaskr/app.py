@@ -100,18 +100,18 @@ def main():
 	markers = []
 	for r in db[TABLE_NAME].find({"state":state_ab}):
 		for center in r['centers']:
-			coord = center[u'coord']
+			coord = center['coord']
 			markers.append({
 			'icon': 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
 			'lat': coord[0],
 			'lng': coord[1],
-			'infobox': "<b>"+center[u'name']+". "+center[u'telephone']+"</b>"
+			'infobox': "<b>"+center['name']+". "+center['telephone']+"</b>"
 			})
 
 	sndmap = Map(
 		identifier="sndmap",
-		lat=coords[0],
-		lng=coords[1],
+		lat=coords[0][0],
+		lng=coords[0][1],
 		markers=markers
 	)
 
