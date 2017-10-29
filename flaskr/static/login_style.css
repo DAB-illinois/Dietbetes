@@ -13,8 +13,8 @@ form p {
 
 input[type="number"],
 input[type="text"] {
-	background-color: #2fc62f;
-    color: white;
+	background-color: white;
+    color: #2fc62f;
 
     width: 25%;
     display: block;
