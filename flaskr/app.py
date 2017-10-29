@@ -14,6 +14,8 @@ db = client[DATABASE_NAME]
 client_name = ""
 
 from flask_googlemaps import GoogleMaps
+from flask_googlemaps import Map
+
 import key
 
 app.config['GOOGLEMAPS_KEY'] = key.GOOGLE_MAPS_KEY
@@ -164,6 +166,18 @@ def choose_food_post():
 	update(client_name, {"carb_log":old_carbs, "serv_log":old_serv})
 	
 	return redirect(url_for('main'))
+
+@app.route("/map/")
+def mapview():
+    # creating a map in the view
+    mymap = Map(
+        identifier="view-side",
+        lat=37.4419,
+        lng=-122.1419,
+        markers=[(37.4419, -122.1419)]
+    )
+    
+    return render_template('map.html', mymap=mymap)
 
 if __name__ == "__main__":
 	app.run(debug=True)
