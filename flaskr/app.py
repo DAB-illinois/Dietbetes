@@ -92,7 +92,7 @@ def main():
 
 	coords = [[38.4419, -90.1419]]
 	base = "https://maps.googleapis.com/maps/api/geocode/json?"
-	params = "latlng={lat},{lon}".format(lat=coords[0],lon=coords[1])
+	params = "latlng={lat},{lon}".format(lat=coords[0][0],lon=coords[0][1])
 	url = "{base}{params}".format(base=base, params=params)
 	response = requests.get(url+"&key="+google_key.KEY)
 	state_ab = response.json()['results'][0]['formatted_address'].split(" ")[-3]
