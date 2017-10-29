@@ -1,5 +1,5 @@
 from datetime import datetime
-from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash
+from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash, make_response
 app = Flask(__name__) # create the application instance :)
 app.config.from_object(__name__) # load config from this file , flaskr.py
 #run flask on linux amazon http://www.datasciencebytes.com/bytes/2015/02/24/running-a-flask-app-on-aws-ec2/
@@ -48,6 +48,10 @@ def login_post():
 	client_name = request.form['name']
 	if client_name == "":
 		return redirect(url_for('login'))
+
+	resp = make_response()
+	resp.set_cookie("user", client_name)
+
 	if db[TABLE_NAME].find({'name': client_name}).count() <= 0:
 		return redirect(url_for('new_user'))
 	else:
