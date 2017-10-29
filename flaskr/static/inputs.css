@@ -29,3 +29,26 @@ input[type=submit]:hover{
 	animation: fade-in 1s ease;
 	background: rgba(47, 198, 47, 1);
 }
+
+input[type="number"],
+input[type="text"] {
+    background-color: white;
+    color: #2fc62f;
+
+    width: 25%;
+    display: block;
+    border: 1px solid #999;
+    height: 25%;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    margin-bottom: 5%;
+    padding: 1%;
+    position: relative;
+
+    font-size: 30px;
+}
+
+input:focus {
+    border-color: #119311;
+    outline: 0;
+}
