@@ -94,20 +94,20 @@ def main():
         markers=[
           {
              'icon': 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
-             'lat': 37.4419,
-             'lng': -122.1419,
-             'infobox': "<b>Hello World</b>"
+             'lat': locations[0][0],
+             'lng': locations[0][1],
+             'infobox': "<b>Where you are right now</b>"
           },
           {
              'icon': 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
-             'lat': 37.4300,
-             'lng': -122.1400,
+             'lat': locations[0][0]+0.1,
+             'lng': locations[0][1]+0.1,
              'infobox': "<b>Hello World from other place</b>"
           }
         ]
     )
 
-	return render_template('index.html', lat=37.4419, sndmap=sndmap, username=request.cookies.get('user'), scatter_values=session.get('scat_values', None), carb_labels=session.get('carb_labels', None), carb_values=session.get('carb_values', None), serv_labels=session.get('serv_labels', None), serv_values=session.get('serv_values', None))
+	return render_template('index.html', sndmap=sndmap, username=request.cookies.get('user'), scatter_values=session.get('scat_values', None), carb_labels=session.get('carb_labels', None), carb_values=session.get('carb_values', None), serv_labels=session.get('serv_labels', None), serv_values=session.get('serv_values', None))
 
 
 @app.route('/main/', methods=['POST'])
