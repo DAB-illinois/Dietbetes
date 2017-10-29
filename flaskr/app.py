@@ -89,7 +89,7 @@ def main():
 	set_graph_data(client_name, session)
 
 	coords = [(38.4419, -90.1419)]
-	close_centers = health_center_finder.find_closest_centers(coords[0][0],coords[0][1])
+	#close_centers = health_center_finder.find_closest_centers(coords[0][0],coords[0][1])
 	markers = []
 	for i in close_centers:
 		name = i[0]
