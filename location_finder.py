@@ -13,8 +13,8 @@ db = client[DATABASE_NAME]
 send_url = 'http://freegeoip.net/json'
 r = requests.get(send_url)
 j = json.loads(r.text)
-lat = j['latitude']
-lon = j['longitude']
+lat = 38
+lon = -90
 results = rg.search((lat, lon))
 state_ab = state_abbrev.us_state_abbrev[results[0]["admin1"]]
 
@@ -29,12 +29,14 @@ def find_closest_centers():
     for state in centers.find({'state':state_ab}):
         
         for center in state["centers"]:
-            print(center['address'])
+            
             lat_lon = convert_to_lat_lon(center['address'], center['name'])
             if lat_lon == None:
                 continue
+            distance = get_distance(lat, lon, lat_lon[0], lat_lon[1])
+            print(distance)
 
-            if get_distance(lat, lon, lat_lon[0], lat_lon[1]) < (8.04672) * 10:
+            if distance < (8.04672) * 10:
                 current_closer_center.append(center["name"])
                 current_closer_center.append(lat_lon)
                 current_closer_center.append(center["telephone"])
