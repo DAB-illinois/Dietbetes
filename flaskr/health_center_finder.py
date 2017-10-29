@@ -1,6 +1,5 @@
 import requests
 import json
-import state_abbrev
 import google_key
 
 from pymongo import MongoClient
