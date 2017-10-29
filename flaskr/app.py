@@ -110,6 +110,12 @@ def main():
 			'infobox': "<b>"+center['name']+". "+center['telephone']+"</b>"
 			})
 
+	markers.append({
+			'icon': 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+			'lat': 38,
+			'lng': -90,
+			'infobox': "<b>Test</b>"
+			})
 	sndmap = Map(
 		identifier="sndmap",
 		lat=coords[0][0],
