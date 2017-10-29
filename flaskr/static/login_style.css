@@ -10,12 +10,16 @@ form div {
     font-size: 32px;
 }
 
-form p {
+form .radio_type {
 	margin: 0;
 	text-align: center;
 	padding: 1%;
 	font-size: 40px;
 }
 
-
-
+form .radio_label {
+    margin: 0;
+    text-align: center;
+    padding: 1%;
+    font-size: 20px;
+}
