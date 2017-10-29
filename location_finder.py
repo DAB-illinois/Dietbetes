@@ -18,6 +18,7 @@ lon = j['longitude']
 results = rg.search((lat, lon))
 state_ab = state_abbrev.us_state_abbrev[results["admin1"]]
 
+print(str(lat) + "," + str(lon))
 
 def find_closest_centers():
     global lat, lon
