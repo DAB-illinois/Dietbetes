@@ -81,3 +81,8 @@ input {
     padding: 1%;
     margin: 5%;
 }
+
+#map {
+	width: 60%;
+	height: 20%;
+}
