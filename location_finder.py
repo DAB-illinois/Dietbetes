@@ -2,6 +2,7 @@ import requests
 import json
 import reverse_geocoder as rg
 import state_abbrev
+import google_key
 
 from pymongo import MongoClient
 client = MongoClient()
@@ -47,7 +48,7 @@ def find_closest_centers():
     return closer_centers
 
 def convert_to_lat_lon(address, name):
-    response_address = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address='+("+".join(address.split(" "))))
+    response_address = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address='+("+".join(address.split(" ")))+"&key="+google_key.KEY)
     response_name = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address='+("+".join(name.split(" "))))
     json_address = response_address.json()
     json_name = response_name.json()
