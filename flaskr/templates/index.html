@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     
+    {{sndmap.js}}
 </head>
 
 <body>
@@ -44,10 +45,8 @@
     	</form>
     </div>
 
-    {% with map=googlemap_obj("another-map", {{ lat }}, -122.1419, markers=[(37.4419, -122.1419), (37.4300, -122.1400, "Hello")]) %}
-	    {{map.html}}
-	    {{map.js}}
-	{% endwith %}
+        <h3> Example for different icons in multiple markers with infoboxes</h3>
+        {{sndmap.html}}
 
     <script>
     	// get bar chart canvas

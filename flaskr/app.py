@@ -87,14 +87,27 @@ def main():
 
 	set_graph_data(client_name, session)
 	locations = [(38.4419, -90.1419)]
-	mymap = Map(
-		identifier="view-side",
-		lat=locations[0][0],
-		lng=locations[0][1],
-		markers=[loc for loc in locations]
-	)
+	sndmap = Map(
+        identifier="sndmap",
+        lat=37.4419,
+        lng=-122.1419,
+        markers=[
+          {
+             'icon': 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+             'lat': 37.4419,
+             'lng': -122.1419,
+             'infobox': "<b>Hello World</b>"
+          },
+          {
+             'icon': 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+             'lat': 37.4300,
+             'lng': -122.1400,
+             'infobox': "<b>Hello World from other place</b>"
+          }
+        ]
+    )
 
-	return render_template('index.html', lat=37.4419, mymap=mymap, username=request.cookies.get('user'), scatter_values=session.get('scat_values', None), carb_labels=session.get('carb_labels', None), carb_values=session.get('carb_values', None), serv_labels=session.get('serv_labels', None), serv_values=session.get('serv_values', None))
+	return render_template('index.html', lat=37.4419, sndmap=sndmap, username=request.cookies.get('user'), scatter_values=session.get('scat_values', None), carb_labels=session.get('carb_labels', None), carb_values=session.get('carb_values', None), serv_labels=session.get('serv_labels', None), serv_values=session.get('serv_values', None))
 
 
 @app.route('/main/', methods=['POST'])
