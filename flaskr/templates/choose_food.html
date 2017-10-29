@@ -16,17 +16,20 @@
 	</div>
     <div class="outer" id="today">
         <p class="div_head">Your Data for Today</p>
-        <div class="chart">
-            <p>Daily Serving Intake Trends</p>
+        <div class="chart" style="margin: -40px 0 40px 0;">
+            <p style="font-size:30px;">Daily Serving Intake Trends</p>
             <canvas id="serving_chart"></canvas>
+            <p>- This graph displays how many servings the user has had in given day(s).</p>
         </div>
-        <div class="chart">
-            <p>Daily Carbohydrate Intake Trends</p>
+        <div class="chart" style="margin: 0 0 40px 0;">
+            <p style="font-size:30px;">Daily Carbohydrate Intake Trends</p>
             <canvas id="carb_chart"></canvas>
+            <p>- This graph displays how much carbohydrate the user has had in given day(s).</p>
         </div>
-        <div class="chart">
-            <p>You Relative to Diabetic Patients</p>
+        <div class="chart" style="margin: 0 0 40px 0;">
+            <p style="font-size:30px;">Diabetic Patients within your Race and Gender</p>
             <canvas id="compare_chart"></canvas>
+            <p>- This graph displays around 100,000 diabetic patients who have the same attributes as the user's age and race. A1c values refer to the patients' blood sugar (< 5.7: normal | 5.7< A1c < 6.4: prediabetes | > 6.4: diabetes) </p>
         </div>
     </div>
     <div class="outer" id="log">
@@ -42,118 +45,138 @@
     	</form>
     </div>
     <script>
-    // get bar chart canvas
-    var serving_chart = document.getElementById("serving_chart").getContext("2d");
-    var carb_chart = document.getElementById("carb_chart").getContext("2d");
-    var compare_chart = document.getElementById("compare_chart").getContext("2d");
+    	// get bar chart canvas
+		var serving_chart = document.getElementById("serving_chart").getContext("2d");
+		var carb_chart = document.getElementById("carb_chart").getContext("2d");
+		var compare_chart = document.getElementById("compare_chart").getContext("2d");
 
-    // bar chart data
-    mainGraphColorTransparent = "rgba(77, 255, 77, 0.6)";
-    mainGraphColorOpaque = "rgba(77, 255, 77, 1)";
-    barChartBorderWidth = 1.5;
+		// bar chart data
+		mainGraphColorTransparent = "rgba(77, 255, 77, 0.6)";
+		mainGraphColorOpaque = "rgba(77, 255, 77, 1)";
+		barChartBorderWidth = 1.5;
 
-    steps = 10
-    max = 10
-    // draw bar chart
+		steps = 10
+		max = 10
+		// draw bar chart
 
-    new Chart(serving_chart, {
-        type: 'bar',
-        data: {
-	        labels: [{% for item in serv_labels %}
-	            "{{item}}", {% endfor %}
-	        ],
-	        datasets: [{
-	            backgroundColor: mainGraphColorTransparent,
-	            borderColor: mainGraphColorOpaque,
-	            borderWidth: barChartBorderWidth,
-	            data: [{% for item in serv_values %} {{ item }},
-	                {% endfor %}
-	            ]
-	        }]
-	    },
-        options: {
-            legend: { display: false },
-            maintainAspectRatio: false,
-            scales: {
-	            yAxes: [{
-	                ticks: {
-	                    beginAtZero:true,
-	                }
-	            }]
-	        }
+		new Chart(serving_chart, {
+		    type: 'bar',
+		    data: {
+		        labels: [{% for item in serv_labels %}
+		            "{{item}}", {% endfor %}
+		        ],
+		        datasets: [{
+		            backgroundColor: mainGraphColorTransparent,
+		            borderColor: mainGraphColorOpaque,
+		            borderWidth: barChartBorderWidth,
+		            data: [{% for item in serv_values %} {{ item }},
+		                {% endfor %}
+		            ]
+		        }]
+		    },
+		    options: {
+		        legend: { display: false },
+		        maintainAspectRatio: false,
+		        scales: {
+		            yAxes: [{
+		                ticks: {
+		                    beginAtZero:true,
+		                },
+		            scaleLabel: {
+					        display: true,
+					        labelString: 'Servings'
+					    }    
+		            }],
+		            xAxes: [{ 
+		                scaleLabel: {
+					        display: true,
+					        labelString: 'Dates'
+					    }
+		            }]
+		        }
+			}
+		});
 
-        }
-    });
+		new Chart(carb_chart, {
+		    type: 'bar',
+		    data: {
+		        labels: [{% for item in carb_labels %}
+		            "{{item}}", {% endfor %}
+		        ],
+		        datasets: [{
+		            backgroundColor: mainGraphColorTransparent,
+		            borderColor: mainGraphColorOpaque,
+		            borderWidth: barChartBorderWidth,
+		            data: [{% for item in carb_values %} {{ item }},
+		                {% endfor %}
+		            ]
+		        }]
+		    },
+		    options: {
+		        legend: { display: false },
+				maintainAspectRatio: false,
+		        scales: {
+		            yAxes: [{
+		                ticks: {
+		                    beginAtZero:true,
+		                },
+		            scaleLabel: {
+					        display: true,
+					        labelString: 'Amount of Carbohydrate'
+					    }
+		            }],
+		            xAxes: [{ 
+		                scaleLabel: {
+					        display: true,
+					        labelString: 'Dates'
+					    }
+		            }]
+		        }
+		    }
+		});
 
-    new Chart(carb_chart, {
-        type: 'bar',
-        data: {
-	        labels: [{% for item in carb_labels %}
-	            "{{item}}", {% endfor %}
-	        ],
-	        datasets: [{
-	            backgroundColor: mainGraphColorTransparent,
-	            borderColor: mainGraphColorOpaque,
-	            borderWidth: barChartBorderWidth,
-	            data: [{% for item in carb_values %} {{ item }},
-	                {% endfor %}
-	            ]
-	        }]
-	    },
-        options: {
-            legend: { display: false },
-			maintainAspectRatio: false,
-            scales: {
-	            yAxes: [{
-	                ticks: {
-	                    beginAtZero:true,
-	                }
-	            }]
-	        }
-        }
-    });
-
-    new Chart(compare_chart, {
-        type: 'scatter',
-        data: {
-	        datasets: [{
-	            backgroundColor: mainGraphColorTransparent,
-	            fill: false,
-	            showLine: false,
-	            borderColor: mainGraphColorOpaque,
-	            data: [{% for item in scatter_values %} {
-	                    x: {{ item[0] }},
-	                    y: {{ item[1] }}
-	                },
-	                {% endfor %}
-	            ]
-	        }]
-	    },
-        options: {
-            legend: { display: false },
-            maintainAspectRatio: false,
-            scales: {
-	            yAxes: [{
-	                ticks: {
-	                    beginAtZero:true,
-	                }, 
-	                scaleLabel: {
-				        display: true,
-				        labelString: 'Age'
-				    }
-	            }],
-	            xAxes: [{
-	                ticks: {
-	                    beginAtZero:true,
-	                }, 
-	                scaleLabel: {
-				        display: true,
-				        labelString: 'A1C Level'
-				    }
-	            }]
-	        }
-        }
-    });</script>
+		new Chart(compare_chart, {
+		    type: 'scatter',
+		    data: {
+		        datasets: [{
+		            backgroundColor: mainGraphColorTransparent,
+		            fill: false,
+		            showLine: false,
+		            borderColor: mainGraphColorOpaque,
+		            data: [{% for item in scatter_values %} {
+		                    x: {{ item[0] }},
+		                    y: {{ item[1] }}
+		                },
+		                {% endfor %}
+		            ]
+		        }]
+		    },
+		    options: {
+		        legend: { display: false },
+		        maintainAspectRatio: false,
+		        scales: {
+		            yAxes: [{
+		                ticks: {
+		                    beginAtZero:true,
+		                }, 
+		                scaleLabel: {
+					        display: true,
+					        labelString: 'Age'
+					    }
+		            }],
+		            xAxes: [{
+		                ticks: {
+		                    beginAtZero:true,
+		                }, 
+		                scaleLabel: {
+					        display: true,
+					        labelString: 'A1C Level'
+					    }
+		            }]
+		        }
+		    }
+		});
+    </script>
 </body>
 
 </html>
