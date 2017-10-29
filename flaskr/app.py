@@ -126,6 +126,9 @@ def choose_food_post():
 	food_name = request.form['type_food']
 	serving_size = int(request.form['serving_size'])
 	if serving_size == "":
+		return "Invalid Input"
+
+	if serving_size == "":
 		return "Invalid Input!"
 	data = {}
 	for food_data in queries:
