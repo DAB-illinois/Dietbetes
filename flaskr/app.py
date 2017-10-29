@@ -101,12 +101,12 @@ def main():
  #             'infobox': "<b>"+name+". "+tele+"</b>"
  #          })
 
-	sndmap = Map(
-        identifier="sndmap",
-        lat=locations[0][0],
-        lng=locations[0][1],
-        markers=markers
-    )
+	# sndmap = Map(
+ #        identifier="sndmap",
+ #        lat=locations[0][0],
+ #        lng=locations[0][1],
+ #        markers=markers
+ #    )
 
 	return render_template('index.html', sndmap=sndmap, username=request.cookies.get('user'), scatter_values=session.get('scat_values', None), carb_labels=session.get('carb_labels', None), carb_values=session.get('carb_values', None), serv_labels=session.get('serv_labels', None), serv_values=session.get('serv_values', None))
 
