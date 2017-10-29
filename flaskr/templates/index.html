@@ -45,8 +45,12 @@
     	</form>
     </div>
 
-    <h2> Template filter decoupled with single marker </h2>
-        {{"decoupled-map"|googlemap_html(37.4419, -122.1419)}}
+    {{"decoupled-map"|googlemap_html(37.4419, -122.1419)}}
+
+    {% with map=googlemap_obj("another-map", 37.4419, -122.1419, markers=[(37.4419, -122.1419), (37.4300, -122.1400, "Hello")]) %}
+    {{map.html}}
+    {{map.js}}
+{% endwith %}
 
     <script>
     	// get bar chart canvas
