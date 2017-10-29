@@ -1,6 +1,7 @@
 from urllib.request import Request, urlopen
 import lxml.html
 import re
+import requests
 
 base_url = "https://npidb.org/organizations/ambulatory_health_care/federally-qualified-health-center-fqhc_261qf0400x/?page="
 inner_base_url = "https://npidb.org"
