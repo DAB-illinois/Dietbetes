@@ -148,6 +148,7 @@ def choose_food():
 	for food_data in session.get('queries', None):
 		food_names.append(food_data["food_name"])
 
+	return str(session.get('serv_labels', None))
 	return render_template('choose_food.html', results=food_names, username=request.cookies.get('user'), scatter_values=session.get('scat_values', None), carb_labels=session.get('carb_labels', None), carb_values=session.get('carb_values', None), serv_labels=session.get('serv_labels', None), serv_values=session.get('serv_values', None))
 
 @app.route('/choose_food/', methods=['POST'])
