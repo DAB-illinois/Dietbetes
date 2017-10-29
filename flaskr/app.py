@@ -86,11 +86,11 @@ def main():
 		return redirect(url_for('login'))
 
 	set_graph_data(client_name, session)
-	locations = [(37.4419, -122.1419)]
+	locations = [(38.4419, -90.1419)]
 	mymap = Map(
 		identifier="view-side",
-		lat=37.4419,
-		lng=-122.1419,
+		lat=locations[0][0],
+		lng=locations[0][1],
 		markers=[loc for loc in locations]
 	)
 
